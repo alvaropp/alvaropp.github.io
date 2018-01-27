@@ -383,15 +383,20 @@ footer a:hover { color: #B509AC; }
 
 .post-link { display: block; font-size: 42px; }
 
-.project { box-sizing: border-box; float: left; vertical-align: middle; width: 33%; height: 0; padding-right: 1%; padding-left: 1%; padding-bottom: 33%; padding-up: 4%; }
+.project { box-sizing: border-box; float: left; vertical-align: middle; flex: 33%; max-width: 33%; padding-right: 2.5%; padding-left: 2.5%; padding-bottom: 2.5%; padding-top: 2.5%; }
 .project .thumbnail { overflow: hidden; width: 100%; height: 0; padding-right: 2%; padding-left: 2%; padding-bottom: 100%; }
 .project .thumbnail img { position: relative; left: 0%; top: 0%; width: 100%; padding-top: 0%; padding-bottom: 0%; }
 .project .thumbnail a { float: left; position: relative; width: 100%; padding-top: 0%; padding-bottom: 0%; }
-.project .thumbnail a span { position: absolute; top: 0; left: 0; bottom: 0; right: 0; background: rgba(0, 0, 0, 0.5); color: #e8e8e8; padding-right: 15%; padding-left: 15%; padding-bottom: 15%; padding-top: 5%; text-align: center; }
-.project .thumbnail a span h1 { font-size: calc(14px + 6 * ((100vw - 320px) / 680)); margin: 0; padding-right: 5%; padding-left: 5%; padding-bottom: 5%; padding-top: 7.5%; }
-.project .thumbnail a span p { font-size: calc(10px + 6 * ((100vw - 500px) / 600)); color: #e8e8e8; margin: 0; padding-right: 5%; padding-left: 5%; padding-bottom: 5%; padding-top: 7.5%; }
+.project .thumbnail a span { display: none; position: absolute; top: 0; left: 0; bottom: 0; right: 0; background: rgba(0, 0, 0, 0.5); color: #e8e8e8; padding-right: 15%; padding-left: 15%; padding-bottom: 15%; padding-top: 5%; text-align: center; }
+.project .thumbnail a span h1 { font-size: 1.5em; margin: 0; padding-right: 5%; padding-left: 5%; padding-top: 1em; padding-bottom: 0em; }
+.project .thumbnail a span p { font-size: 1em; color: #e8e8e8; margin: 0; padding-right: 5%; padding-left: 5%; padding-top: 0.5em; padding-bottom: 1em; }
 .project .thumbnail a:hover span { display: block; }
 
+@media only screen and (max-width: 600px) { .project .thumbnail a span { display: block; } }
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) { .project { flex: 50%; max-width: 50%; } }
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) { .project { flex: 100%; max-width: 100%; } }
 .profile { float: right !important; }
 .profile img { box-shadow: 0 0 5px #828282; width: 100%; }
 
