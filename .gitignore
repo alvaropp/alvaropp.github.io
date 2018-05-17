@@ -1,2 +1,7 @@
 to-do.txt
-.DS_Store
+_site
+.sass-cache
+.jekyll-metadata
+.DS_store
+.ruby-version
+Gemfile.lock
