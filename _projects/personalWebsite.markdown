@@ -1,7 +1,7 @@
 ---
 layout: page
 date: 2018-01-01
-title: Personal website
+title: Personal Website
 description: using Jekyll!
 skills: Jakyll, CSS, HTML, Markdown
 brief: A simple and clean personal website (you are reading it right now so should have noticed :-) to showcase my work, both academic and hobbyist. The website is powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> using a modified open-source <a href="https://github.com/alshedivat/al-folio" target="_blank">theme</a>. What makes Jekyll, and some similar projects such as <a href="https://github.com/getpelican/pelican" target="_blank"https://github.com/getpelican/pelican>Pelican</a> so convenient is the fact that they automatically generate static websites from markdown. This enormously speeds up the website creating process, as you can choose an open-source theme and either modify it to suit your needs, or proceed directly to populating the site.
