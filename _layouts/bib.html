@@ -27,7 +27,6 @@
             {% endif %}
           {% endif %}
         {% else %}
-          and
           {% if author.last == site.scholar.last_name %}
             <em>{{author.last}}, {{author.first}}</em>
           {% else %}
@@ -45,7 +44,7 @@
     {% if entry.type == "article" %}
       <em>{{entry.journal}}</em>,
     {% elsif entry.type == "inproceedings" %}
-      <em>In {{entry.booktitle}}</em>,
+      <em>In {{entry.booktitle}}</em>
     {% endif %}
     {% if entry.publisher == "GitHub" %}
       <em>Open-source software</em>,
