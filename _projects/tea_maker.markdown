@@ -10,6 +10,17 @@ featured: <a href="http://www.wired.co.uk/article/automate-your-own-tea-maker">W
 how-to: full build instructions on <a href="https://www.instructables.com/id/DIY-Automated-Tea-Maker/" target="_blank">Instructables</a>, code available on <a href="https://github.com/alvaropp/teamaker" target="_blank">GitHub</a>
 ---
 
+<br>
+
+Wired UK wrote a <a href="http://www.wired.co.uk/article/automate-your-own-tea-maker">one-page article</a> about this device in May 2015, including some nice artwork:
+
+<div class="img_single">
+    <img class="col three" src="https://wi-images.condecdn.net/image/Rp2607yyDg9/crop/1020/f/teamaker.jpg"/>
+</div>
+<span style="font-size: 0.65em; float: right">Image courtesy of <a href="http://www.wired.co.uk/article/automate-your-own-tea-maker" target="_ blank">Wired UK</a>.
+</span>
+<br>
+
 <hr>
 
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_ blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Tea Maker</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Alvaro Perez-Diaz</span> is licensed under a<a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_ blank">Creative Commons Attribution 4.0 International License</a>.
