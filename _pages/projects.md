@@ -2,8 +2,9 @@
 layout: page
 title: projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: A growing collection of cool projects.
 ---
+
 {% assign sorted = site.projects | sort: 'date' | reverse %}
 
 {% for project in sorted %}
