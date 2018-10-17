@@ -86,6 +86,9 @@ scholar:
 
   last_name: Perez-Diaz
 
+  group_by: type
+  type_order: [article,inproceedings,misc,dataset]
+
   style: apa
   locale: en
 
