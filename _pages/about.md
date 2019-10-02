@@ -1,7 +1,7 @@
 ---
 layout: about
 permalink: /
-title: <strong>Alvaro</strong> Perez-Diaz
+title: <strong>Alvaro Perez-Diaz</strong>, PhD
 description: PhD student at the University of Southampton, UK.
 
 profile:
