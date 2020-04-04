@@ -18,7 +18,7 @@ social: true
 
 [//]: # (Supports Font-Awesome and Academicons)
 
-I am a Research Data Scientist at [Senseye](https://www.senseye.io){:target="_blank"}, working on a variety of things including unsupervised learning and anomaly detection.
+I am a Research Data Scientist at [Senseye.io](https://www.senseye.io){:target="_blank"}, working on a variety of topics including both supervised and unsupervised learning.
 
 Formerly, I did a PhD in the [Agents, Interaction and Complexity](https://www.aic.ecs.soton.ac.uk/) group, at the University of Southampton in the UK. My research studied the interaction between large fleets of electric vehicles and electricity markets. By using techniques from different fields of AI, we were able to coordinate the charging of electric vehicles in order to achieve lower prices and reduced congestion. More information about my research can be found in the [publications](/publications) section.
 
