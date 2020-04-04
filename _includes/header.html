@@ -4,7 +4,7 @@
 
     {% if page.layout != "about" %}
     <span class="site-title">
-        <a class="page-link" href="{{ site.baseurl | prepend: site.url }}/"><strong>{{ site.name }}</strong></a>
+        <a class="page-link" href="{{ site.baseurl | prepend: site.url }}/"><strong>{{ site.name }}</strong>, {{ site.degree }}</a>
     </span>
     {% endif %}
 
@@ -24,9 +24,7 @@
       <div class="trigger">
         <a class="page-link" href="/projects">projects</a>
         <a class="page-link" href="/publications">publications</a>
-        <!-- CV link -->
         <a class="page-link" href="{{ '/assets/pdf/CV.pdf' | prepend: site.baseurl | prepend: site.url }}" target="_blank">CV</a>
-        <!-- Adventures -->
         <a class="page-link" href="/adventures">adventures</a>
       </div>
     </nav>
