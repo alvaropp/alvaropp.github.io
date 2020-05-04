@@ -10,11 +10,12 @@ how-to: code available on <a href="https://github.com/alvaropp/keep-exploring" t
 big_img: https://user-images.githubusercontent.com/4785303/80966808-23872580-8e0d-11ea-9e97-dcb6e316106d.gif
 ---
 
-The idea is to visit every street, road, path and trail in Guildford Borough using my feet and my bikes. I record these activities using Komoot and embed the routes in an interactive map that should be getting fuller with time. This map is available [here](http://alvarop.me/keep-exploring/){:target="_ blank"} and embedded in the following frame:
+The idea is to visit every street, road, path and trail in Guildford Borough using my feet and my bikes. I record these activities using [Komoot](https://www.komoot.com/user/807017409913){:target="_ blank"} and embed the routes in an interactive map (that should be getting fuller with time) using [Folium](https://github.com/python-visualization/folium){:target="_ blank"}. This map is available [here](http://alvarop.me/keep-exploring/){:target="_ blank"} and embedded in the following frame:
 <div class="video-container">
   <iframe src="https://alvarop.me/keep-exploring/" frameborder="0" allowfullscreen></iframe>
 </div>
 
+This project should be easy to replicate using your own routes and area. It is a great way to get to know your surroundings better and you would be surprised about what you can find in a 20min ride from your doorstep!
 
 <hr>
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT){:target="_ blank"}
