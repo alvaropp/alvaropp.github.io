@@ -12,7 +12,7 @@ big_img: https://user-images.githubusercontent.com/4785303/80966808-23872580-8e0
 
 The idea is to visit every street, road, path and trail in Guildford Borough using my feet and my bikes. I record these activities using Komoot and embed the routes in an interactive map that should be getting fuller with time. This map is available [here](http://alvarop.me/keep-exploring/){:target="_ blank"} and embedded in the following frame:
 <div class="video-container">
-  <iframe src="http://alvarop.me/keep-exploring/" frameborder="0" allowfullscreen></iframe>
+  <iframe src="https://alvarop.me/keep-exploring/" frameborder="0" allowfullscreen></iframe>
 </div>
 
 
