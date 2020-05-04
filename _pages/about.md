@@ -18,4 +18,4 @@ Formerly, I did a PhD in the [Agents, Interaction and Complexity](https://www.ai
 
 In my free time, I frequently engage in side projects which usually lie somewhere between computer science, electronics and education. These experiments occasionally get featured in cool websites and magazines, or win small prizes. Relevant projects I've worked on can be found in the [projects](/projects) section.
 
-I also enjoy the outdoors and practising sports, specially long-distance running, cycling or walking. I am slowly building a collection of my top trips and adventures, which can be found in the [adventures](/adventures) section.
+I also enjoy the outdoors and practising sports, specially long-distance running, cycling or walking. I am slowly building a collection of trips and adventures, which can be found in the [adventures](/adventures) section.
