@@ -1,3 +1,10 @@
+@inproceedings{Perez-Diaz2020b,
+abstract = {We consider a scenario where self-interested Electric Vehicle (EV) aggregators compete in the day-ahead electricity market in order to purchase the electricity needed to meet EV requirements. We propose a novel decentralised bidding coordination algorithm based on the Alternating Direction Method of Multipliers (ADMM). Our simulations using real market and driver data from Spain show that the algorithm is able to significantly reduce energy costs for all participants. Furthermore, we postulate that strategic manipulation by deviating agents is possible in decentralised algorithms like ADMM. Hence, we describe and analyse different possible attack vectors and propose a mathematical framework to quantify and detect manipulation. Our simulations show that our ADMM based algorithm can be effectively disrupted by manipulative attacks achieving convergence to a different non-optimal solution which benefits the attacker. At the same time, our proposed manipulation detection algorithm achieves very high accuracy.},
+author = {Perez-Diaz, Alvaro and Gerding, Enrico H. and McGroarty, Frank},
+booktitle = {Proc. of the 29th International Joint Conference on Artificial Intelligence (IJCAI 2020).},
+title = {{Catching Cheats: Detecting Strategic Manipulation in Distributed Optimisation of Electric Vehicle Aggregators (Extended Abstract)}},
+year = {2020, in press, journal track},
+}
 @inproceedings{Gerding2019,
 abstract = {We consider mechanisms for the online allocation of perishable resources such as energy or computational power. The main application is electric vehicle charging where agents arrive and leave over time. Unlike previous work, we consider mechanisms without money, and a range of objectives including fairness and efficiency. In doing so, we extend the concept of envy-freeness to online settings. Furthermore, we explore the trade-offs between different objectives and analyse their theoretical properties both in online and offline settings. We then introduce novel online scheduling algorithms and compare them in terms of both their theoretical properties and empirical performance.},
 author = {Gerding, Enrico H. and Perez-Diaz, Alvaro and Aziz, Haris and Gaspers, Serge and Marcu, Antonia and Mattei, Nicholas and Walsh, Toby},
@@ -17,7 +24,7 @@ year = {2019},
 url = {https://onlinelibrary.wiley.com/doi/epdf/10.1002/ece3.5020},
 external_pdf = {https://onlinelibrary.wiley.com/doi/epdf/10.1002/ece3.5020/}
 }
-@article{Perez-Diaz2018d,
+@article{Perez-Diaz2020,
 abstract = {Given the rapid rise of electric vehicles (EVs) worldwide, and the ambitious targets set for the near future, the management of large EV fleets must be seen as a priority. Specifically, we study a scenario where EV charging is managed through self-interested EV aggregators who compete in the day-ahead market in order to purchase the electricity needed to meet their clients' requirements. In order to reduce electricity costs and lower the impact on electricity markets, a centralised bidding coordination framework has been proposed in the literature employing a coordinator. In order to improve privacy and limit the need for the coordinator, we propose a reformulation of the coordination framework as a decentralised algorithm, employing the Alternating Direction Method of Multipliers (ADMM). However, given the self-interested nature of the aggregators, they can deviate from the algorithm in order to improve their personal utility. Hence, we study strategic manipulation of the ADMM algorithm and, in doing so, describe and analyse different attack vectors, and propose a mathematical framework to quantify and detect manipulation. Finally, we test the decentralised coordination and manipulation detection algorithms in realistic scenarios using real market and driver data from Spain. Our empirical results show the convergence of the coordination algorithm, and that the detection algorithm accurately detects deviating behaviour in up to 96% of the cases.},
 author = {Perez-Diaz, Alvaro and Gerding, Enrico H. and McGroarty, Frank},
 journal = {Journal of Artificial Intelligence Research},
@@ -26,7 +33,7 @@ volume = {67},
 title = {{Catching Cheats: Detecting Strategic Manipulation in Distributed Optimisation of Electric Vehicle Aggregators}},
 url = {https://arxiv.org/abs/1810.07063},
 external_pdf = {https://arxiv.org/abs/1810.07063},
-year = {2018}
+year = {2020}
 }
 @inproceedings{Perez-Diaz2018c,
 abstract = {Given the rapid rise of electric vehicles (EVs) worldwide, and the ambitious targets set for the near future, the management of large EV fleets must be seen as a priority. Specifically, we study a scenario where EV charging is managed through self-interested EV aggregators who compete in the day-ahead market in order to purchase the electricity needed to meet their clients' requirements. In order to reduce electricity costs and lower the impact on electricity markets, a centralised bidding coordination framework has been proposed in the literature, using a trusted black-box coordinator. In order to improve privacy and limit the need for the coordinator, we propose a reformulation of the coordination framework as a decentralised algorithm, employing the Alternating Direction Method of Multipliers (ADMM). We test the resulting algorithm in a realistic scenario with real market and driver data from Spain. Finally, we discuss the potential of implementing the proposed coordination algorithm in a blockchain, providing transparency and anti-tampering guarantees.},
@@ -104,21 +111,35 @@ title = {{PythonTool-Mod for Minecraft}},
 url = {https://github.com/ngcm/PythonTool-Mod},
 year = {2016}
 }
-@Dataset{Perez-Diaz2018b,
-author = {Perez-Diaz, Alvaro and Gerding, Enrico H. and McGroarty, Frank},
+@Dataset{AAMAS2018_datasdet,
+author = {Perez-Diaz, Alvaro},
 doi = {10.5258/SOTON/D0413},
 publisher = {University of Southampton},
 title = {{Dataset for "Coordination of Electric Vehicle Aggregators: A Coalitional Approach"}},
 url = {https://eprints.soton.ac.uk/417940/},
 year = {2018}
 }
-@Dataset{appEnergyDataset,
-author = {Perez-Diaz, Alvaro and Gerding, Enrico H. and McGroarty, Frank},
+@Dataset{AppEnergy_dataset,
+author = {Perez-Diaz, Alvaro},
 doi = {10.5258/SOTON/D0339},
-keywords = {aggregator,coordination,electric vehicle,mechanism design,omie,payment},
-month = {dec},
 publisher = {University of Southampton},
 title = {{Dataset for "Coordination and payment mechanisms for electric vehicle aggregators" article}},
 url = {https://eprints.soton.ac.uk/416291/},
 year = {2018}
+}
+@Dataset{Thesis_dataset,
+author = {Perez-Diaz, Alvaro},
+doi = {10.5258/SOTON/D1080},
+publisher = {University of Southampton},
+title = {{Dataset for "Coordination Mechanisms for Electric Vehicle Aggregators"}},
+url = {https://eprints.soton.ac.uk/434255/},
+year = {2019}
+}
+@Dataset{IJCAI19_dataset,
+author = {Perez-Diaz, Alvaro},
+doi = {10.5258/SOTON/D0926},
+publisher = {University of Southampton},
+title = {{Dataset for "Fair Online Allocation of Perishable Goods and its Application to Electric Vehicle Charging"}},
+url = {https://eprints.soton.ac.uk/430960/},
+year = {2019}
 }
