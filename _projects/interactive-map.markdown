@@ -15,13 +15,13 @@ I played a table-top RPG game during the lockdown and thought it would be cool t
 This was an interesting exercise and I built the prototype using Google's <a href="https://firebase.google.com/" target="_blank">Firebase</a> as a real-time database and <a href="https://leafletjs.com/" target="_blank">Leaflet.js</a> to handle the interactive maps. By using a tile approach (similar to Google Maps, etc.) I was able to turn high-definition image maps into responsive and lightweight zoomable maps, like the examples below. Each character in the map can be dragged, and the changes are immediately visible in every browser that has the map open (these examples are static though).
 
 <div class="video-container">
-  <iframe src="http://alvarop.me/fantasy-map-example/space.html" frameborder="0" allowfullscreen></iframe>
+  <iframe src="https://alvarop.me/fantasy-map-example/space.html" frameborder="0" allowfullscreen></iframe>
 </div>
 
 <br>
 
 <div class="video-container">
-  <iframe src="http://alvarop.me/fantasy-map-example/index.html" frameborder="0" allowfullscreen></iframe>
+  <iframe src="https://alvarop.me/fantasy-map-example/index.html" frameborder="0" allowfullscreen></iframe>
 </div>
 
 <br>
