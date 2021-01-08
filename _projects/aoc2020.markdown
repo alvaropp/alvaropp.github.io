@@ -1,0 +1,21 @@
+---
+layout: page
+date: 2020-12-25
+title: Advent of Code 2020 and 2016
+description: challenges
+brief: Full solutions for the <a href="https://adventofcode.com" target="_blank">Advent of Code</a> 2020 and 2016 challenges, using Python. I've grown very fond of the Advent of Code and it's very nice to see one's programming skills improving over time.
+img: https://user-images.githubusercontent.com/4785303/104013519-72aa0500-51a9-11eb-8c2d-ec330c1f6361.jpg
+no_img: yes
+skills: Algorithms, programming, Python
+how-to: code available on <a href="https://github.com/alvaropp/AdventOfCode" target="_blank">GitHub</a>
+---
+
+
+<div class="img_single">
+  <img class="col three" src="https://user-images.githubusercontent.com/4785303/104013519-72aa0500-51a9-11eb-8c2d-ec330c1f6361.jpg"/>
+  <img class="col three" src="https://user-images.githubusercontent.com/4785303/104013512-7047ab00-51a9-11eb-9733-5c3d68a4123a.jpg">
+</div>
+
+<hr>
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT){:target="_ blank"} <br>
+The code for Advent of Code 2017 by Alvaro Perez-Diaz is available under an [MIT](https://opensource.org/licenses/MIT){:target="_ blank"} license.
