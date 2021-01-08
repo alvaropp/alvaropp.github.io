@@ -13,7 +13,7 @@
   <link rel="shortcut icon" href="/assets/img/favicon.ico">
 
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="canonical" href="/blog/">
+  <link rel="canonical" href="/projects/blockchain_voting/">
 </head>
 
 
@@ -56,32 +56,63 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="header-bar">
-  <h1>myBlog</h1>
-  <h2>no-description</h2>
-</div>
+        <div class="post">
 
+  <header class="post-header">
+    <h1 class="post-title">Decentralised Voting System</h1>
+    <h4 class="post-description">An experiment about using blockchain for decentralised voting using the Ethereum. In more detail, white-listed users can vote for one of the candidates using a web app, and a smart contract keeps track of the votes. This was built as part of a one-day <a href="https://www.aic.ecs.soton.ac.uk/" target="_blank">AIC</a> hackathlon with several colleagues.</h4>
 
-<ul class="post-list">
-  
+    
+    <h5 class="post-description">Skills: Python, blockchain, Ethereum, Solidity, HTML, js</h5>
+    
+
+    
+
+    
+
+    
+    <h5 class="post-description">How-to: code available on <a href="https://github.com/dorotafilipczuk/blockchain-voting-system" target="_blank">GitHub</a></h5>
+    
+
+    <hr>
+  </header>
+
+  <article class="post-content Decentralised Voting System clearfix">
+    
+    <div class="img_single">
+        <img class="col three" src="https://user-images.githubusercontent.com/4785303/40201815-192cff04-5a18-11e8-8fa8-53e81c4631ca.png"/>
+    </div>
+
+    
+
+    <p>Blockchain has introduced a new ecosystem of decentralised and transparent applications, running without a central authority and providing high guarantees against tampering. During a one-day hackathlon at the University of Southampton, we decided to implement a stereotypical example in order to learn more about blockchain: a voting application implemented in <a href="https://www.ethereum.org/" target="_ blank">Ethereum</a>.</p>
+
+<p>The proposed framework consists of three components:</p>
+<ul>
+  <li>A private Ethereum test blockchain running on <a href="https://github.com/trufflesuite/ganache" target="_ blank">Ganache</a>.</li>
+  <li>A smart contract taking care of voter identity and vote counts, implemented using <a href="https://solidity.readthedocs.io/en/v0.4.24/" target="_ blank">Solidity</a>. It <em>heavily</em> borrows from an example in the Solidity docs, but it has a couple more features: a white-list of of voters and max one vote per voter.</li>
+  <li>A web app where voters can type their public address, cast their vote and see real-time vote counts.</li>
 </ul>
 
+<p>For the demo, the idea was to give people print outs with a public address of the blockchain, which they could then use to login in the web app and cast their vote. Of course, this project was quick, exploratory work. The resulting web app and smart contract are not safe for real use, but work fine for illustrative purposes.</p>
 
-<div class="pagination clearfix mb1 mt4">
-  <div class="left">
-    
-      <span class="pagination-item disabled">Newer</span>
-    
-  </div>
-  <div class="right">
-    
-      <span class="pagination-item disabled">Older</span>
-    
-  </div>
-  <div class="pagination-meta">Page  of </div>
+<div class="img_single">
+    <img class="col three" src="https://user-images.githubusercontent.com/4785303/40201943-76e3ca9c-5a18-11e8-9f1c-177af60c4726.png" />
 </div>
 
+<hr />
 
+<p><a href="https://opensource.org/licenses/MIT" target="_ blank"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" /></a></p>
+
+<p><a href="https://github.com/dorotafilipczuk/blockchain-voting-system" target="_ blank">Blockchain-voting-system</a> is available under an <a href="https://opensource.org/licenses/MIT" target="_ blank">MIT</a> license.</p>
+
+  </article>
+
+  
+
+  
+
+</div>
 
       </div>
     </div>

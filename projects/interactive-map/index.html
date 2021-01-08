@@ -13,7 +13,7 @@
   <link rel="shortcut icon" href="/assets/img/favicon.ico">
 
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="canonical" href="/blog/">
+  <link rel="canonical" href="/projects/interactive-map/">
 </head>
 
 
@@ -56,32 +56,65 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="header-bar">
-  <h1>myBlog</h1>
-  <h2>no-description</h2>
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Interactive maps</h1>
+    <h4 class="post-description">Create zoomable maps of your choice, populate them with characters and share them with friends. Everybody can move characters around and the changes are updated in real-time. Useful for table-top or RPG games in these difficult lockdown times.</h4>
+
+    
+    <h5 class="post-description">Skills: Firebase, js, Leaflet, Python, Flask</h5>
+    
+
+    
+
+    
+
+    
+    <h5 class="post-description">How-to: code available on <a href="https://github.com/alvaropp/interactive-fantasy-map" target="_blank">GitHub</a></h5>
+    
+
+    <hr>
+  </header>
+
+  <article class="post-content Interactive maps clearfix">
+    
+
+    
+
+    <p>I played a table-top RPG game during the lockdown and thought it would be cool to be able to play with friends online. Of course, there are lots of RPG websites full of cool features to manage online games, but I found that these need quite a lot of setup and what we wanted was just to have a lightweight shared interactive map that was quick to setup.</p>
+
+<p>This was an interesting exercise and I built the prototype using Google’s <a href="https://firebase.google.com/" target="_blank">Firebase</a> as a real-time database and <a href="https://leafletjs.com/" target="_blank">Leaflet.js</a> to handle the interactive maps. By using a tile approach (similar to Google Maps, etc.) I was able to turn high-definition image maps into responsive and lightweight zoomable maps, like the examples below. Each character in the map can be dragged, and the changes are immediately visible in every browser that has the map open (these examples are static though).</p>
+
+<div class="video-container">
+  <iframe src="https://alvarop.me/fantasy-map-example/space.html" frameborder="0" allowfullscreen=""></iframe>
 </div>
 
+<p><br /></p>
 
-<ul class="post-list">
+<div class="video-container">
+  <iframe src="https://alvarop.me/fantasy-map-example/index.html" frameborder="0" allowfullscreen=""></iframe>
+</div>
+
+<p><br /></p>
+
+<p>I also created a simple form that would allow you to select your map image and the desired number of characters with their icons, and it would automatically create tiles based on the map image at different zoom levels, and host everything online, giving you an url that you can share with the other players.</p>
+
+<p>Although this project is not online anymore, full code is available in Github as linked above.</p>
+
+<hr />
+
+<p><a href="https://opensource.org/licenses/MIT" target="_ blank"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" /></a></p>
+
+<p><a href="https://github.com/alvaropp/interactive-fantasy-map" target="_ blank">interactive-fantasy-map</a> is available under an <a href="https://opensource.org/licenses/MIT" target="_ blank">MIT</a> license.</p>
+
+  </article>
+
   
-</ul>
 
+  
 
-<div class="pagination clearfix mb1 mt4">
-  <div class="left">
-    
-      <span class="pagination-item disabled">Newer</span>
-    
-  </div>
-  <div class="right">
-    
-      <span class="pagination-item disabled">Older</span>
-    
-  </div>
-  <div class="pagination-meta">Page  of </div>
 </div>
-
-
 
       </div>
     </div>

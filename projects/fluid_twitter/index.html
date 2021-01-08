@@ -13,7 +13,7 @@
   <link rel="shortcut icon" href="/assets/img/favicon.ico">
 
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="canonical" href="/blog/">
+  <link rel="canonical" href="/projects/fluid_twitter/">
 </head>
 
 
@@ -56,32 +56,56 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="header-bar">
-  <h1>myBlog</h1>
-  <h2>no-description</h2>
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Interactive Fluid Simulation</h1>
+    <h4 class="post-description">This project builds upon the great <a href="https://github.com/ngcm/interactive-fluid-demo" target="_blank">fluid flow simulation</a> developed by <a href="http://cmg.soton.ac.uk/people/gmd1n15/" target="_blank">Gary Downing</a> as an <a href="http://ngcm.soton.ac.uk" target="_blank">NGCM</a> outreach show. This fluid simulation software takes real input from a web-cam and runs a fluid simulation on top of the real-time images, where fluid comes from the left-hand side of the screen and is affected by the present objects on its way. This has been proven very successful in previous outreach events from the University of Southampton. For this year's University of Southampton Science and Engineering Festival 2018, and any other outreach events, I made a simple extension which integrates with Twitter. Basically, any participant can send a custom image or drawing to our Twitter account <a href="https://twitter.com/FluidFlowTest" target="_blank">@FluidFlowTest</a>, and will instantly receive a GIF with the fluid simulation on top of their image in return.</h4>
+
+    
+    <h5 class="post-description">Skills: Python, Twitter API, virtual machines</h5>
+    
+
+    
+
+    
+
+    
+    <h5 class="post-description">How-to: code available on <a href="https://github.com/alvaropp/interactive-fluid-twitter" target="_blank">GitHub</a></h5>
+    
+
+    <hr>
+  </header>
+
+  <article class="post-content Interactive Fluid Simulation clearfix">
+    
+    <div class="img_single">
+        <img class="col three" src="https://user-images.githubusercontent.com/4785303/35059288-8757857c-fbb2-11e7-9b96-b0d32f02744f.gif"/>
+    </div>
+
+    
+
+    <div class="img_single">
+    <img class="col three" src="https://user-images.githubusercontent.com/4785303/35060001-eb033510-fbb4-11e7-8d14-384632987b6b.gif" />
 </div>
 
+<p><br /></p>
 
-<ul class="post-list">
+<p>This software uses <a href="https://github.com/tweepy/tweepy" target="_ blank">Tweepy</a> to implement a Twitter stream listener which captures tweets that mention our Twitter account. When one such tweet is received, the software automatically tries to retrieve an attached image, which is then used to run the fluid simulation. Several stills of this simulation are captured and built into a GIF, which is then tweeted back at the user.</p>
+
+<hr />
+
+<p><a href="https://opensource.org/licenses/MIT" target="_ blank"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" /></a></p>
+
+<p><a href="https://github.com/ngcm/interactive-fluid-demo" target="_ blank">Interactive-fluid-demo</a> by Gary Downing is available under an <a href="https://opensource.org/licenses/MIT" target="_ blank">MIT</a> license. The extension for Twitter, <a href="https://github.com/alvaropp/interactive-fluid-twitter" target="_ blank">Interactive-fluid-twitter</a> by Alvaro Perez-Diaz is available under an <a href="https://opensource.org/licenses/MIT" target="_ blank">MIT</a> license.</p>
+
+  </article>
+
   
-</ul>
 
+  
 
-<div class="pagination clearfix mb1 mt4">
-  <div class="left">
-    
-      <span class="pagination-item disabled">Newer</span>
-    
-  </div>
-  <div class="right">
-    
-      <span class="pagination-item disabled">Older</span>
-    
-  </div>
-  <div class="pagination-meta">Page  of </div>
 </div>
-
-
 
       </div>
     </div>
