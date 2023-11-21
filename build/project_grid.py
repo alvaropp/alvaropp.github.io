@@ -1,6 +1,8 @@
-from pathlib import Path
 import re
+
+from pathlib import Path
 from jinja2 import Environment, FileSystemLoader, select_autoescape
+from slugify import slugify
 
 
 def extract_data_from_md(file_path):
@@ -17,7 +19,12 @@ def generate_html_for_grid(directory):
     html = '<div class="projects-grid">'
     for filename in Path(directory).glob("*.markdown"):
         title, img_url = extract_data_from_md(filename)
-        project_html = f'<div class="project-item"><img src="{img_url}" alt="{title}"><p>{title}</p></div>'
+        project_html = (
+            f'<div class="project-item">'
+            f'<a href="projects/{slugify(title)}.html">'
+            f'<img src="{img_url}" alt="{title}"></a>'
+            f"<p>{title}</p></div>"
+        )
         html += project_html
     html += "</div>"
     return html
