@@ -3,16 +3,43 @@
 
 <head>
     <title>{{ project.title }}</title>
-</head>
+    <style>
+        .navbar {
+            display: flex;
+            justify-content: center;
+        }
 
+        .navbar a {
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+        }
+    </style>
+    <link rel="shortcut icon" href="imgs/favicon.ico">
+</head>
 <body>
-    ## Unnumbered H2
-    (###) {{ project.title }}
+    **[Dr. Alvaro Perez-Diaz](localhost:8000)**
+    _Researcher & Data Scientist_
+    _Senseye Predictive Maintenance, Siemens_
+
+    <div class="navbar">
+        <a href="projects.html">Projects</a>
+        <a href="https://scholar.google.com/citations?user=EQCORCgAAAAJ&hl=en" target="_blank">Publications</a>
+        <a href="https://www.linkedin.com/in/alvaro-perez-diaz/" target="_blank">CV</a>
+        <a href="https://github.com/alvaropp" target="_blank">Github</a>
+    </div>
+
+    (#) {{ project.title }}
+
     <p><em>{{ project.description }}</em></p>
     <img src="{{ project.img_url }}" alt="{{ project.title }}">
     <p>{{ project.brief }}</p>
-
-    <!-- <script src="https://casual-effects.com/markdeep/latest/markdeep.min.js" charset="utf-8"></script> -->
 </body>
 
 </html>
