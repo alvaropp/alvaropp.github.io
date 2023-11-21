@@ -26,10 +26,7 @@ def generate_html_for_grid(directory):
 output_folder = Path("output")
 output_folder.mkdir(parents=True, exist_ok=True)
 
-env = Environment(
-    loader=FileSystemLoader("templates"),
-    autoescape=select_autoescape(["html", "xml"]),
-)
+env = Environment(loader=FileSystemLoader("templates"), autoescape=True)
 
 template = env.get_template("projects.html")
 
