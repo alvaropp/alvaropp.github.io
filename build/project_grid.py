@@ -1,6 +1,6 @@
 from pathlib import Path
 import re
-from markdown2 import markdown
+from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 
 def extract_data_from_md(file_path):
@@ -23,7 +23,18 @@ def generate_html_for_grid(directory):
     return html
 
 
-# Save the generated HTML to a file or print it
-code = generate_html_for_grid("../projects")
-with open("../projects_grid.html", "w") as file:
-    file.write(code)
+output_folder = Path("output")
+output_folder.mkdir(parents=True, exist_ok=True)
+
+env = Environment(
+    loader=FileSystemLoader("templates"),
+    autoescape=select_autoescape(["html", "xml"]),
+)
+
+template = env.get_template("projects.html")
+
+project_grid = generate_html_for_grid("content/projects/")
+html = template.render(project_grid=project_grid)
+
+with open(output_folder / "projects.html", "w") as file:
+    file.write(html)
