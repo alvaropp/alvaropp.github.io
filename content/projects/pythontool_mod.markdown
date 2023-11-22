@@ -17,9 +17,9 @@ The game Minecraft has been extremely successful in the last five years, with ov
 
 The possibility to employ Python to alter a Minecraft world in real time has been around for a number of years, provided by the game's creators. However, we believe that the usual text editor & console duo is daunting for young learners or people with limited programming experience. To overcome these difficulties, this mod attempts to *gamify* the programming experience, where players can write Python scripts which get ported inside the game as Python script objects, which can be held, dropped, and used with the click of a mouse. This resembles the way that any other weapon, tool or block is used within the game. Any number of different Python scripts can be put in the player's inventory, and they can be all used together in an interactive way.
 
-Detailed installation and user guides can be found in the project's website. We recommend the book [Adventures in Minecraft](https://www.wiley.com/en-gb/Adventures+in+Minecraft-p-9781118946916){:target="_ blank"} by David Whale and Martin O'Hanlon to learn more about Python programming and Minecraft.
+Detailed installation and user guides can be found in the project's website. We recommend the book <a href="https://www.wiley.com/en-gb/Adventures+in+Minecraft-p-9781118946916" target="_blank">Adventures in Minecraft</a> by David Whale and Martin O'Hanlon to learn more about Python programming and Minecraft.
 
-From a technical perspective, PythonTool is made with Java using the [Forge](https://files.minecraftforge.net/){:target="_ blank"} modding framework. It supports several recent versions of Minecraft and the mod's `.jar` files are built automatically using [CircleCI](https://www.circleci.com){:target="_ blank"} upon Github commits, and uploaded to the downloads section of the official website.
+From a technical perspective, PythonTool is made with Java using the <a href="https://files.minecraftforge.net/" target="_blank">Forge</a> modding framework. It supports several recent versions of Minecraft and the mod's `.jar` files are built automatically using <a href="https://www.circleci.com" target="_blank">CircleCI</a> upon Github commits, and uploaded to the downloads section of the official website.
 
 <hr>
 

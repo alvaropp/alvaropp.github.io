@@ -16,7 +16,7 @@ For my current application, I have a database of outdoor locations, which I have
 
 This motivated searching for an agile way to store all the GPS data locally and to create an interactive map without any reasonble size limits (as is the case in Google My Maps mentioned above). After a bit of research, Python and [Folium](https://github.com/python-visualization/folium) seemed like a good choice.
 
-### Open an interactive OpenStreetMap
+(###) Open an interactive OpenStreetMap
 
 With [Folium](https://github.com/python-visualization/folium), we can open an interactive OpenStreetMap window centered at the coordinates and level of zoom or our choice. In this case, we will focus on the south of the UK.
 
@@ -55,7 +55,7 @@ The current folder structure for my outdoor database is as follows:
 
 We can now bulk-load each type of data to the map, using custom icons and colours.
 
-### Bulk-load waypoints
+(###) Bulk-load waypoints
 
 
 ```python
@@ -94,7 +94,7 @@ m
 
 
 
-### Bulk load routes
+(###) Bulk load routes
 
 We can do the same with the routes, which get converted from the `gpx` file to a `latitude,longitude` pairs.
 
@@ -165,7 +165,7 @@ m
 
 
 
-### Save map
+(###) Save map
 
 Once our map is loaded with the desired information, we can export it to a standalone `html` file. Note however that it requires an Internet connection in order to zoom in and provide higher level of detail.
 
@@ -174,7 +174,7 @@ Once our map is loaded with the desired information, we can export it to a stand
 m.save('exampleMap.html')
 ```
 
-### Conclusion
+(###) Conclusion
 
 The presented code is able to load a responsive interactive map which allows the easy visualisation of a collection of GPS data. By keeping GPS data locally in `csv` and `gpx` files, we ensure long term compatibility. The current file structure is easy to backup in the cloud, *e.g.* one can use Dropbox straight away. The library `Folium` provides much more functionality, such as richer pop-ups with images and interactive html code, which can make the map more useful.
 

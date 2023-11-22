@@ -10,7 +10,7 @@ featured: <a href="https://makezine.com/2016/04/04/the-emotionbox-uses-blynk-to-
 how-to: full build instructions on <a href="https://www.instructables.com/id/EmotionBox/" target="_blank">Instructables</a>, code available on <a href="https://github.com/alvaropp/EmotionBox" target="_blank">GitHub</a>.
 ---
 
-{% include video.html id="6Z7FFeKUdfk" %}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6Z7FFeKUdfk?si=vOIigjbmSFYnHUSl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <hr>
 

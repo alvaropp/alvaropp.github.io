@@ -16,7 +16,7 @@ how-to: code available on <a href="https://github.com/alvaropp/interactive-fluid
 
 <br>
 
-This software uses [Tweepy](https://github.com/tweepy/tweepy){:target="_ blank"} to implement a Twitter stream listener which captures tweets that mention our Twitter account. When one such tweet is received, the software automatically tries to retrieve an attached image, which is then used to run the fluid simulation. Several stills of this simulation are captured and built into a GIF, which is then tweeted back at the user.
+This software uses <a href="https://github.com/tweepy/tweepy" target="_blank">Tweepy</a> to implement a Twitter stream listener which captures tweets that mention our Twitter account. When one such tweet is received, the software automatically tries to retrieve an attached image, which is then used to run the fluid simulation. Several stills of this simulation are captured and built into a GIF, which is then tweeted back at the user.
 
 <hr>
 

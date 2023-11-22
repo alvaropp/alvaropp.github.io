@@ -21,11 +21,11 @@ As a rough example, I recorded myself walking on the line:
 YouTubeVideo('fL3lAojlZY8', width=700, height=400)
 ```
 
-{% include video.html id="fL3lAojlZY8" %}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fL3lAojlZY8?si=hIsnCraksX_GRvOO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Ideally, you want to wear clothes with different colours from the background, as it makes contour detection much easier. In the example video above, I achieved this partially. The blue coat is generally easy to detect, however, some shadows make it black in some areas and some detail is lost. Similarly with the jeans, they look quite black and white, hence their detection needs more care. Until I get the chance to record a better video, we will focus on detecting the upper body only, which usually provides a decent approximation.
 
-### Import necessary libraries
+(###) Import necessary libraries
 
 ```python
 %matplotlib inline
@@ -39,7 +39,7 @@ rcParams['figure.figsize'] = [15, 10]
 from IPython.lib.display import YouTubeVideo
 ```
 
-### Test contour selection
+(###) Test contour selection
 
 First, we will try the contour detection on a still frame from the example video. Many sophisticated contour detection techniques exist, which are outside of the scope of this short example. We will focus on colour detection, where we specify a range of RGB colours to look for, and an area of the image to do so (computationally cheaper and quicker).
 
@@ -130,7 +130,7 @@ plt.show()
     <img class="col three" src="https://user-images.githubusercontent.com/4785303/36992276-54eda93a-20a2-11e8-84ae-9a1b47e5af97.jpg"/>
 </div>
 
-### Video analysis
+(###) Video analysis
 
 So far, we are able to approximately find the centre of gravity in a picture of someone standing on a slackline. This can be easily extended to deal with a video instead.
 
@@ -231,11 +231,10 @@ Depending on the length and resolution of the video, this analysis can take a wh
 YouTubeVideo('2epc_1mojQs', width=700, height=400)
 ```
 
-{% include video.html id="2epc_1mojQs" %}
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2epc_1mojQs?si=5ABMNHu_zi7xvPyp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <br>
 
-We can see that our approximated centre of mass roughly stays centered on top of the line. Of course, contour detection is not great in this example, as shadows are not captured in the coat. Also, the legs play a significant role in balance, and were not captured in our example. As mentioned earlier, with a bit of care, one could use motion detection, or combine black and white contours to pick up the legs and include them in the analysis. Orange leggings would also do the trick!
+We can see that our approximated centre of mass roughly stays centred on top of the line. Of course, contour detection is not great in this example, as shadows are not captured in the coat. Also, the legs play a significant role in balance, and were not captured in our example. As mentioned earlier, with a bit of care, one could use motion detection, or combine black and white contours to pick up the legs and include them in the analysis. Orange leggings would also do the trick!
 
 <hr>
 

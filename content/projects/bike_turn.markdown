@@ -14,7 +14,7 @@ how-to: full build instructions on <a href="https://www.instructables.com/id/DIY
 
 <br>The device can be built very cheap as it employs simple analogue electronics. Specifically, an astable multivibrator with two transistor-capacitor pairs generates the blinking behaviour. Plain red or orange LEDs are quite bright at night if adequately pointed towards cars behind the cyclist.<br>
 
-{% include video.html id="yW1TZw_2H4U" %}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yW1TZw_2H4U?si=dDAaQVE8ZwRN_ruL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <hr>
 
