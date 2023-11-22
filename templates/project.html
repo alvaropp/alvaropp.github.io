@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{ project.title }}</title>
+    <style>
+        .navbar {
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar a {
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+            gap: 20px;
+        }
+
+        .project-item {
+            text-align: center;
+        }
+
+        .project-item p {
+            margin-top: 10px;
+        }
+    </style>
+    <link rel="shortcut icon" href="../imgs/favicon.ico">
+</head>
+<body>
+    **[Dr. Alvaro Perez-Diaz](localhost:8000)**
+    _Researcher & Data Scientist_
+    _Senseye Predictive Maintenance, Siemens_
+
+    <div class="navbar">
+        <a href="projects.html">Projects</a>
+        <a href="https://scholar.google.com/citations?user=EQCORCgAAAAJ&hl=en" target="_blank">Publications</a>
+        <a href="https://www.linkedin.com/in/alvaro-perez-diaz/" target="_blank">CV</a>
+        <a href="https://github.com/alvaropp" target="_blank">Github</a>
+    </div>
+
+    (#) {{ project.title }}: <em>{{ project.description | safe}}</em>
+
+    <p>{{ project.brief }}</p>
+
+    <p>Skills: {{ project.skills }}</p>
+
+    {% if project.how_to != ""%}
+    <p>How-to: {{project.how_to}}</p>
+    {% endif %}
+
+    {% if project.featured != ""%}
+    <p>Featured: {{project.featured}}</p>
+    {% endif %}
+
+    {% if project.awards != ""%}
+    <p>Awards: {{project.awards}}</p>
+    {% endif %}
+    
+    {% if project.big_img_url != ""%}
+    <img src="{{ project.big_img_url }}" alt="{{ project.title }}">
+    {% elif project.img_url != ""%}
+    <img src="{{ project.img_url }}" alt="{{ project.title }}">
+    {% endif %}
+
+    <p>{{ project.text }}</p>
+</body>
+
+</html>
+
+<!-- Markdeep: --><style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="markdeep.min.js" charset="utf-8"></script><script src="https://morgan3d.github.io/markdeep/latest/markdeep.min.js" charset="utf-8"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>

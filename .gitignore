@@ -1,7 +1,3 @@
-to-do.txt
-_site
-.sass-cache
-.jekyll-metadata
-.DS_store
-.ruby-version
-Gemfile.lock
+.DS_Store
+.venv/
+output/
