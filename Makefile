@@ -22,6 +22,10 @@ build:
 
 # Deploy to 'page' branch and clean up
 deploy:
+	@if ! git diff-index --quiet HEAD --; then \
+		echo "Uncommitted changes detected. Commit your changes before deploying."; \
+		exit 1; \
+	fi
 	git checkout -b page || git checkout page
 	rm -rf * .[^.]*
 	cp -r ../output/* .
