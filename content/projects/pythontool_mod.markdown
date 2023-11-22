@@ -3,12 +3,12 @@ layout: page
 date: 2016-09-01
 title: PythonTool Mod
 description: Python inside Minecraft!
-skills: Java, Python, Jekyll, continuous integration
+skills: Java, Python, Jekyll, continuous integration.
 brief: This project consisted in the creation of PythonTool, a Minecraft mod which allows visual and interactive in-game execution of Python scripts which alter the Minecraft world in real time. It makes use of existing software libraries such as mcpi and RaspberryJam-Mod, and tries to improve and ease the programming experience. A non-traditional programming workflow using Jupyter Notebook is also proposed to complement the mod. This project was developed at the University of Southampton under the supervision of Prof Hans Fangohr.
 img: https://user-images.githubusercontent.com/4785303/35472489-fe0c6022-0367-11e8-8f1a-5cc30e163ffa.jpg
 video: mghcv0qJNv8
 awards: The <i>Best new activity</i> award at the University of Southampton Science and Engineering Festival 2017 was given to all <a href="http://ngcm.soton.ac.uk/">NGCM</a> participants and activities, including the workshop with PythonTool-Mod.
-how-to: <a href="https://ngcm.github.io/PythonTool-Mod/" target="_blank">official website</a>, code available on <a href="https://github.com/ngcm/PythonTool-Mod" target="_blank">GitHub</a>, how-to also hosted at <a href="https://www.instructables.com/id/Interactive-Python-Programming-for-Minecraft-Pytho/" target="_blank">Instructables</a>
+how-to: <a href="https://ngcm.github.io/PythonTool-Mod/" target="_blank">official website</a>, code available on <a href="https://github.com/ngcm/PythonTool-Mod" target="_blank">GitHub</a>, how-to also hosted at <a href="https://www.instructables.com/id/Interactive-Python-Programming-for-Minecraft-Pytho/" target="_blank">Instructables</a>.
 ---
 
 <br>

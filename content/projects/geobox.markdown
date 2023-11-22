@@ -5,7 +5,7 @@ title: GeoBox
 description: reverse geocaching present
 brief: Fun birthday present based on <a href="http://www.sundial.com/" target="_blank">Sundial's Quest Box</a>. It consists of a locked wooden box with no latch or keyhole displaying a small LCD screen and a switch. When the switch is flicked, the screen lights up and displays four different numbers. The user has to figure out that these are distances to four different points on Earth, which can then be triangulated. The box will automatically open once it has visited these four places and contains a present inside.
 img: https://user-images.githubusercontent.com/4785303/57459450-30f5e800-726b-11e9-8455-c01724ee50ca.png
-skills: Making, Electronics, Arduino
+skills: Making, Electronics, Arduino.
 big_img: https://user-images.githubusercontent.com/4785303/57458453-479b3f80-7269-11e9-8038-207870ebd43e.jpg
 ---
 

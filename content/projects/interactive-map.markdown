@@ -6,8 +6,8 @@ description: online table top games
 brief: Create zoomable maps of your choice, populate them with characters and share them with friends. Everybody can move characters around and the changes are updated in real-time. Useful for table-top or RPG games in these difficult lockdown times.
 img: https://user-images.githubusercontent.com/4785303/104022834-bb1cef00-51b8-11eb-8d16-1c414a02e54d.jpg
 no_img: yes
-skills: Firebase, js, Leaflet, Python, Flask
-how-to: code available on <a href="https://github.com/alvaropp/interactive-fantasy-map" target="_blank">GitHub</a>
+skills: Firebase, js, Leaflet, Python, Flask.
+how-to: code available on <a href="https://github.com/alvaropp/interactive-fantasy-map" target="_blank">GitHub</a>.
 ---
 
 I played a table-top RPG game during the lockdown and thought it would be cool to be able to play with friends online. Of course, there are lots of RPG websites full of cool features to manage online games, but I found that these need quite a lot of setup and what we wanted was just to have a lightweight shared interactive map that was quick to setup.

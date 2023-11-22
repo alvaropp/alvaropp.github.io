@@ -8,22 +8,32 @@ from slugify import slugify
 def extract_data_from_md(file_path):
     with open(file_path, "r") as file:
         content = file.read()
+
+        date_match = re.search(r"date: (.+)", content)
         title_match = re.search(r"title: (.+)", content)
         img_match = re.search(r"img: (.+)", content)
-        title = title_match[1] if title_match else "No Title"
+
+        date = date_match[1] if date_match else ""
+        title = title_match[1] if title_match else ""
         img_url = img_match[1] if img_match else ""
-        return title, img_url
+        return date, title, img_url
 
 
 def generate_html_for_grid(directory):
-    html = '<div class="projects-grid">'
+    projects = []
     for filename in Path(directory).glob("*.markdown"):
-        title, img_url = extract_data_from_md(filename)
+        date, title, img_url = extract_data_from_md(filename)
+        projects.append({"title": title, "img_url": img_url, "date": date})
+
+    projects = sorted(projects, key=lambda x: x["date"], reverse=True)
+
+    html = '<div class="projects-grid">'
+    for project in projects:
         project_html = (
             f'<div class="project-item">'
-            f'<a href="projects/{slugify(title)}.html">'
-            f'<img src="{img_url}" alt="{title}"></a>'
-            f"<p>{title}</p></div>"
+            f'<a href="projects/{slugify(project["title"])}.html">'
+            f'<img src="{project["img_url"]}" alt="{project["title"]}"></a>'
+            f"<p>{project['title']}</p></div>"
         )
         html += project_html
     html += "</div>"

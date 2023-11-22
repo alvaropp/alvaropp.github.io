@@ -5,7 +5,7 @@ title: Real-time GPS tracking
 description: using your phone
 brief: Easily track location and progress along a given route with the idea of being able to track people in long runs. I have been using this successfully in the last few months so that I can be tracked (and track my parter) in order to meet along the way or to be picked up at the end. I've been using the Overland app to transmit location data from my phone and hosting the server in PythonAnywhere.
 img: https://user-images.githubusercontent.com/4785303/104010194-0c6eb380-51a4-11eb-9564-5ac11df666ef.jpg
-skills: js, Leaflet, Python, Flask
+skills: js, Leaflet, Python, Flask.
 big_img: https://user-images.githubusercontent.com/4785303/104010342-4344c980-51a4-11eb-920c-fdf64beb573a.jpg
 ---
 

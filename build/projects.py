@@ -65,7 +65,6 @@ output_folder = Path("output/projects/")
 output_folder.mkdir(parents=True, exist_ok=True)
 
 projects = [extract_data_from_markdown(file) for file in project_files]
-projects = sorted(projects, key=lambda x: x["date"], reverse=False)
 
 for project in projects:
     template = env.get_template("project.html")

@@ -5,8 +5,8 @@ title: GPS Data
 description: and interactive maps
 brief: Easily manage and visualise a database of GPS data, including waypoints and routes of different types. The idea is to safely store a growing collection of GPS data, camping, cycling and hiking data in my case, in the long term. The data is stored locally, potentially backed up in the cloud, and is shown on an interactive map.
 img: https://user-images.githubusercontent.com/4785303/37111108-d2fe9f7e-2236-11e8-8d3c-04fb6c1992bd.jpeg
-skills: Python, Folium, Jupyter notebooks
-how-to: code available below
+skills: Python, Folium, Jupyter notebooks.
+how-to: code available below.
 no_img: yes
 ---
 

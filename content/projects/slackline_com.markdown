@@ -5,8 +5,8 @@ title: Centre of Mass Tracking
 description: slacklining!
 brief: A small computer vision project to show that the centre of mass of someone walking on a slackline stays fixed vertically on top of the line (unless you fall!). By employing Python and OpenCV we are able to track an approximation of the centre of mass of a person slacklining in a video.
 img: https://user-images.githubusercontent.com/4785303/37111220-106c5d7e-2237-11e8-8ba0-3f2fb095fd88.jpeg
-skills: Python, OpenCV, Jupyter notebooks, physics
-how-to: example videos and code below
+skills: Python, OpenCV, Jupyter notebooks, physics.
+how-to: example videos and code below.
 no_img: yes
 ---
 
