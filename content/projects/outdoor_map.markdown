@@ -179,6 +179,5 @@ m.save('exampleMap.html')
 The presented code is able to load a responsive interactive map which allows the easy visualisation of a collection of GPS data. By keeping GPS data locally in `csv` and `gpx` files, we ensure long term compatibility. The current file structure is easy to backup in the cloud, *e.g.* one can use Dropbox straight away. The library `Folium` provides much more functionality, such as richer pop-ups with images and interactive html code, which can make the map more useful.
 
 <hr>
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT){:target="_ blank"}
 
-The code snippets accompanying this project are available under an MIT license.
+![](https://img.shields.io/badge/License-MIT-yellow.svg)

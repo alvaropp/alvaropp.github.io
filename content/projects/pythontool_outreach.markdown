@@ -20,6 +20,5 @@ how-to: workshop materials available on <a href="https://github.com/alvaropp/Pyt
 Original contents were created to support these outreach events. From posters and leaflets, to learning materials. In particular, we presented the participants with several challenges, each involving a Python script which some variable parameters they could tweak. The results could be observed inside the game. To show an example, we usually started by a script which took a sentence and printed it with big *blocky* letters in Minecraft. The participants were then able to identify the piece of code containing the sentence and customise to their liking, as well as the colour. Another popular challenge involved shooting TNT blocks, where the players could change the power of gravity, and observe that the higher the gravity value, the quicker the TNT blocks were pulled down. The full set of materials can be found on [GitHub](https://github.com/alvaropp/PythonTool_outreach){:target="_ blank"}.
 
 <hr>
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT){:target="_ blank"}
 
-These <a href="https://github.com/alvaropp/PythonTool_outreach" target="_blank">workshop materials</a> created by Ashley Setter, Matthew Mostert and Alvaro Perez-Diaz are available under an [MIT](https://opensource.org/licenses/MIT){:target="_ blank"} license.
+![](https://img.shields.io/badge/License-MIT-yellow.svg)

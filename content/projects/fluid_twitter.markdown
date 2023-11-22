@@ -19,6 +19,5 @@ how-to: code available on <a href="https://github.com/alvaropp/interactive-fluid
 This software uses [Tweepy](https://github.com/tweepy/tweepy){:target="_ blank"} to implement a Twitter stream listener which captures tweets that mention our Twitter account. When one such tweet is received, the software automatically tries to retrieve an attached image, which is then used to run the fluid simulation. Several stills of this simulation are captured and built into a GIF, which is then tweeted back at the user.
 
 <hr>
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT){:target="_ blank"}
 
-[Interactive-fluid-demo](https://github.com/ngcm/interactive-fluid-demo){:target="_ blank"} by Gary Downing is available under an [MIT](https://opensource.org/licenses/MIT){:target="_ blank"} license. The extension for Twitter, [Interactive-fluid-twitter](https://github.com/alvaropp/interactive-fluid-twitter){:target="_ blank"} by Alvaro Perez-Diaz is available under an [MIT](https://opensource.org/licenses/MIT){:target="_ blank"} license.
+![](https://img.shields.io/badge/License-MIT-yellow.svg)

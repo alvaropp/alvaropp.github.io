@@ -11,6 +11,5 @@ how-to: code available on <a href="https://github.com/alvaropp/alvaropp.github.i
 ---
 
 <hr>
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT){:target="_ blank"}
 
-The [-folio](https://github.com/bogoli/-folio){:target="_ blank"} and [al-folio](https://github.com/alshedivat/al-folio){:target="_ blank"} themes are both available under an MIT license. This [website](https://github.com/alvaropp/alvaropp.github.io){:target="_ blank"} by Alvaro Perez-Diaz is also available under an [MIT](https://opensource.org/licenses/MIT){:target="_ blank"} license.
+![](https://img.shields.io/badge/License-MIT-yellow.svg)

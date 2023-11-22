@@ -22,7 +22,6 @@ Detailed installation and user guides can be found in the project's website. We 
 From a technical perspective, PythonTool is made with Java using the [Forge](https://files.minecraftforge.net/){:target="_ blank"} modding framework. It supports several recent versions of Minecraft and the mod's `.jar` files are built automatically using [CircleCI](https://www.circleci.com){:target="_ blank"} upon Github commits, and uploaded to the downloads section of the official website.
 
 <hr>
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT){:target="_ blank"}
-[![DOI](https://zenodo.org/badge/65482833.svg)](https://zenodo.org/badge/latestdoi/65482833){:target="_ blank"}
 
-PythonTool-Mod by Alvaro Perez-Diaz and Hans Fangohr is available under an [MIT](https://opensource.org/licenses/MIT){:target="_ blank"} license. [DOI 10.5281/zenodo.801627](https://zenodo.org/record/801627){:target="_ blank"}.
+![](https://img.shields.io/badge/License-MIT-yellow.svg)
+<a rel="license" href="https://zenodo.org/badge/latestdoi/65482833" target="_ blank"><img alt="https://zenodo.org/badge/latestdoi/65482833" style="border-width:0" src="https://zenodo.org/badge/65482833.svg"/></a>

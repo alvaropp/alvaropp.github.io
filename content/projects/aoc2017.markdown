@@ -11,5 +11,5 @@ how-to: code available on <a href="https://github.com/alvaropp/AdventOfCode" tar
 ---
 
 <hr>
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT){:target="_ blank"} <br>
-The code for Advent of Code 2017 by Alvaro Perez-Diaz is available under an [MIT](https://opensource.org/licenses/MIT){:target="_ blank"} license.
+
+![](https://img.shields.io/badge/License-MIT-yellow.svg)

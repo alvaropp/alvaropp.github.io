@@ -31,6 +31,5 @@ I also created a simple form that would allow you to select your map image and t
 Although this project is not online anymore, full code is available in Github as linked above.
 
 <hr>
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT){:target="_ blank"}
 
-[interactive-fantasy-map](https://github.com/alvaropp/interactive-fantasy-map){:target="_ blank"} is available under an [MIT](https://opensource.org/licenses/MIT){:target="_ blank"} license.
+![](https://img.shields.io/badge/License-MIT-yellow.svg)

@@ -20,4 +20,5 @@ I used an Arduino Uno as a brain, an Adafruit GPS module and backlight screen, a
 </div>
 
 <hr>
+
 Quest Box is a registered trademark by Sundial. They do, however, encourage people to build their own boxes and do sell DIY kits in their website.

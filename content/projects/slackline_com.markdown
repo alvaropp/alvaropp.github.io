@@ -238,7 +238,5 @@ YouTubeVideo('2epc_1mojQs', width=700, height=400)
 We can see that our approximated centre of mass roughly stays centered on top of the line. Of course, contour detection is not great in this example, as shadows are not captured in the coat. Also, the legs play a significant role in balance, and were not captured in our example. As mentioned earlier, with a bit of care, one could use motion detection, or combine black and white contours to pick up the legs and include them in the analysis. Orange leggings would also do the trick!
 
 <hr>
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT){:target="_ blank"}
-The code snippets accompanying this project are available under an MIT license.
 
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_ blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">The two example videos shown above, hosted in YouTube</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Alvaro Perez-Diaz</span> are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_ blank">Creative Commons Attribution 4.0 International License</a>.
+<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"/>

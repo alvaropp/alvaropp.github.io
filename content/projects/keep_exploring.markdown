@@ -18,6 +18,5 @@ The idea is to visit every street, road, path and trail in Guildford Borough usi
 This project should be easy to replicate using your own routes and area. It is a great way to get to know your surroundings better and you would be surprised about what you can find in a 20min ride from your doorstep!
 
 <hr>
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT){:target="_ blank"}
 
-[keep-exploring](https://github.com/alvaropp/keep-exploring){:target="_ blank"} is available under an [MIT](https://opensource.org/licenses/MIT){:target="_ blank"} license.
+![](https://img.shields.io/badge/License-MIT-yellow.svg)

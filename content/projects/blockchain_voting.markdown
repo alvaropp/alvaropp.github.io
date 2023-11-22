@@ -24,6 +24,5 @@ For the demo, the idea was to give people print outs with a public address of th
 </div>
 
 <hr>
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT){:target="_ blank"}
 
-[Blockchain-voting-system](https://github.com/dorotafilipczuk/blockchain-voting-system){:target="_ blank"} is available under an [MIT](https://opensource.org/licenses/MIT){:target="_ blank"} license.
+![](https://img.shields.io/badge/License-MIT-yellow.svg)
