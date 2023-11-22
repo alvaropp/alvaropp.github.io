@@ -27,12 +27,12 @@ deploy:
 		exit 1; \
 	fi
 	git checkout -b page || git checkout page
-	rm -rf * .[^.]*
-	cp -r ../output/* .
-	git add .
-	git commit -m "Deploy to page branch"
-	git push origin page
-	git checkout main
-	rm -rf output
+	# rm -rf * .[^.]*
+	# cp -r ../output/* .
+	# git add .
+	# git commit -m "Deploy to page branch"
+	# git push origin page
+	# git checkout main
+	# rm -rf output
 
 .PHONY: all setup copy build deploy
