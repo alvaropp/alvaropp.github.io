@@ -27,7 +27,15 @@ deploy:
 		exit 1; \
 	fi
 	git checkout -b page || git checkout page
-	# rm -rf * .[^.]*
+	git rm -rf .venv/
+	git rm -rf build/
+	git rm -rf imgs/
+	git rm -rf templates/
+	git rm .gitignore
+	git rm index.html
+	git rm Makefile
+	git rm requirements.txt
+
 	# cp -r ../output/* .
 	# git add .
 	# git commit -m "Deploy to page branch"
