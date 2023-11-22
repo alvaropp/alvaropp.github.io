@@ -22,6 +22,11 @@ build:
 
 # Deploy to 'page' branch and clean up
 deploy:
+	current_branch=$(git rev-parse --abbrev-ref HEAD)
+	@if [ "$current_branch" != "main" ]; then
+		echo "You are not on the 'main' branch. Current branch is '$current_branch'."
+		exit 1
+	fi
 	@if ! git diff-index --quiet HEAD --; then \
 		echo "Uncommitted changes detected. Commit your changes before deploying."; \
 		exit 1; \
@@ -39,11 +44,10 @@ deploy:
 
 	cp -r output/* .
 	rm -rf output/
-	rm .DS_Store
+	find . -name '.DS_Store' -type f -delete 
 	git add .
 	git commit -m "Deploy to page branch"
 	git push --set-upstream origin page
 	git checkout main
-	rm -rf output
 
 .PHONY: all setup copy build deploy
