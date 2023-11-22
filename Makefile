@@ -27,7 +27,8 @@ deploy:
 		exit 1; \
 	fi
 	git checkout -b page || git checkout page
-	git rm -rf .venv/
+	rm -rf .venv/
+	git rm -rf content/
 	git rm -rf build/
 	git rm -rf imgs/
 	git rm -rf templates/
@@ -36,11 +37,13 @@ deploy:
 	git rm Makefile
 	git rm requirements.txt
 
-	# cp -r ../output/* .
-	# git add .
-	# git commit -m "Deploy to page branch"
-	# git push origin page
-	# git checkout main
-	# rm -rf output
+	cp -r output/* .
+	rm -rf output/
+	rm .DS_Store
+	git add .
+	git commit -m "Deploy to page branch"
+	git push --set-upstream origin page
+	git checkout main
+	rm -rf output
 
 .PHONY: all setup copy build deploy
