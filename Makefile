@@ -22,7 +22,8 @@ build:
 
 # Deploy to 'page' branch and clean up
 deploy:
-	if [ $(git rev-parse --abbrev-ref HEAD) != "main" ]; then
+	current_branch=$(git rev-parse --abbrev-ref HEAD)
+	if [ "$(git rev-parse --abbrev-ref HEAD)" != "main" ]; then
 		echo "You are not on the 'main' branch. Current branch is '$current_branch'."
 		exit 1
 	fi
