@@ -22,15 +22,17 @@ build:
 
 # Deploy to 'page' branch and clean up
 deploy:
-	current_branch=$(git rev-parse --abbrev-ref HEAD)
-	if [ "$(git rev-parse --abbrev-ref HEAD)" != "main" ]; then
-		echo "You are not on the 'main' branch. Current branch is '$current_branch'."
-		exit 1
-	fi
+	@current_branch=$$(git rev-parse --abbrev-ref HEAD); \
+	echo $$current_branch; \
+	if [ "$$current_branch" != "main" ]; then \
+		echo "You are not on the 'main' branch. Current branch is '$$current_branch'."; \
+		exit 1; \
+	fi; \
 	if ! git diff-index --quiet HEAD --; then \
 		echo "Uncommitted changes detected. Commit your changes before deploying."; \
 		exit 1; \
 	fi
+
 	git checkout -b page || git checkout page
 	rm -rf .venv/
 	git rm -rf content/
