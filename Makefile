@@ -34,6 +34,7 @@ deploy:
 	fi
 
 	git checkout -b page || git checkout page
+	git pull origin page
 	rm -rf .venv/
 	git rm -rf content/
 	git rm -rf build/
