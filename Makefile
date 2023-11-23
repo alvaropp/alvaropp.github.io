@@ -15,6 +15,7 @@ copy:
 	mkdir -p docs
 	cp -r imgs docs/
 	cp index.html docs/
+	cp style.css docs/
 	cp CNAME docs/
 
 # Create static website

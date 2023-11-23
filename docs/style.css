@@ -1,0 +1,24 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar a {
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+    gap: 20px;
+}
+
+.project-item {
+    text-align: center;
+}
+
+.project-item p {
+    margin-top: 10px;
+}
