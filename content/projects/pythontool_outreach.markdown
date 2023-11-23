@@ -1,7 +1,7 @@
 ---
 layout: page
 date: 2017-04-01
-title: Outreach Events
+title: Outreach events
 description: with PythonTool-Mod
 skills: presentation skills, engaging with the public.
 brief: Outreach events for the Next Generation Computational Modelling group in the University of Southampton. Using <a href="../projects/pythontool-mod.html" target="_blank">PythonTool-Mod</a>, we delivered two workshops in which young learners could get hands-on experience with Python programming inside Minecraft. The first event took place at the Winchester Science Centre in February 2017, the second was part of the University of Southampton Science and Engineering Festival in March 2017. A big thanks to all the participants and volunteers!

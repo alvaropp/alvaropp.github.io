@@ -1,7 +1,7 @@
 ---
 layout: page
 date: 2018-05-10
-title: Decentralised Voting System
+title: Decentralised voting system
 description: on blockchain
 brief: An experiment about using blockchain for decentralised voting using the Ethereum. In more detail, white-listed users can vote for one of the candidates using a web app, and a smart contract keeps track of the votes. This was built as part of a one-day <a href="https://www.aic.ecs.soton.ac.uk/" target="_blank">AIC</a> hackathon with several colleagues. 
 img: https://user-images.githubusercontent.com/4785303/40201649-91fca2aa-5a17-11e8-84aa-253056b4b917.png

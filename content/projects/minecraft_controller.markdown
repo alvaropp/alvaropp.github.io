@@ -1,7 +1,7 @@
 ---
 layout: page
 date: 2017-02-27
-title: Minecraft Controller
+title: Minecraft controller
 description: with Orientation sensor data
 skills: sensors, real-time data streaming, UDP, Python.
 brief: When organising <a href="../projects/outreach-events.html" target="_blank">outreach events</a> with <a href="../projects/pythontool-mod.html" target="_blank">PythonTool-Mod</a> for Minecraft, it became clear that many young people are not used to mouse & keyboard gaming. Some of the youngest players would even try to touch the computer monitor hoping it was a touch-screen. These experiences motivated this project, which explores how sensor data from a mobile phone could be employed to control player movement in video-games like Minecraft. Specifically, by using orientation data, one can move the Minecraft player around by tilting the phone in the desired direction.

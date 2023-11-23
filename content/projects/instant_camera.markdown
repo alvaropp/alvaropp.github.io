@@ -1,7 +1,7 @@
 ---
 layout: page
 date: 2017-02-03
-title: Instant Camera
+title: Instant camera
 description: with a thermal printer!
 brief: An instant camera, Polaroid style. It consists of three separate parts. Namely, a broken action camera which only powers on when connected to power through USB, a Raspberry Pi and a thermal printer like the ones commonly used for purchase receipts. The three things are relatively portable and can be easily powered off a powerbank. Stills are taken with the push of a button which is fixed to the Raspberry Pi's case, and can be instantly printed with a second press when the printer is connected.
 img: https://user-images.githubusercontent.com/4785303/36443949-1e8acaba-1672-11e8-8431-a8dba6e2ba0d.jpg

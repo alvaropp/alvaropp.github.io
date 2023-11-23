@@ -1,7 +1,7 @@
 ---
 layout: page
 date: 2016-05-29
-title: Bicycle Turn Indicator
+title: Bicycle turn indicator
 description: be safe! 
 brief: A small turn indicator for bicycles. Comes in a compact box that can be easily attached to the saddle stem and a small switch that can be placed in the handlebar. Using the switch the rider can indicate right/left turns, which are displayed by arrow-shaped blinking LEDs. It tries to improve riding safety at night when sticking your hand out to indicate turns is not very visible.
 img: https://user-images.githubusercontent.com/4785303/34775332-b4ae030a-f60a-11e7-8a69-3333b7d48b08.jpg

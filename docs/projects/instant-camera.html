@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Instant Camera</title>
+    <title>Instant camera</title>
     <link rel="stylesheet" type="text/css" href="../style.css">
     <link rel="shortcut icon" href="../imgs/favicon.ico">
 </head>
@@ -18,7 +18,7 @@
         <a href="https://github.com/alvaropp" target="_blank">Github</a>
     </div>
 
-    (#) Instant Camera: <em>with a thermal printer!</em>
+    (#) Instant camera: <em>with a thermal printer!</em>
 
     <p>An instant camera, Polaroid style. It consists of three separate parts. Namely, a broken action camera which only powers on when connected to power through USB, a Raspberry Pi and a thermal printer like the ones commonly used for purchase receipts. The three things are relatively portable and can be easily powered off a powerbank. Stills are taken with the push of a button which is fixed to the Raspberry Pi&#39;s case, and can be instantly printed with a second press when the printer is connected.</p>
 
@@ -31,7 +31,7 @@
     
     
     
-    <img src="https://user-images.githubusercontent.com/4785303/36443946-1e2a4aa0-1672-11e8-83c6-b30d27f6784d.jpg" alt="Instant Camera">
+    <img src="https://user-images.githubusercontent.com/4785303/36443946-1e2a4aa0-1672-11e8-83c6-b30d27f6784d.jpg" alt="Instant camera">
     
 
     <p>The thermal printer itself is a &lt;a href=&#34;http://www.pipsta.co.uk/&#34; target=&#34;_blank&#34;&gt;Pipsta&lt;/a&gt;, which comes with support for the Raspberry Pi, and plenty of &lt;a href=&#34;https://bitbucket.org/ablesystems/pipsta/overview&#34; target=&#34;_blank&#34;&gt;code examples&lt;/a&gt;. On the camera side, it is a nearly-bricked &lt;a href=&#34;https://sjcam.com/product/sj4000/&#34; target=&#34;_blank&#34;&gt;SJ4000&lt;/a&gt;, which can be interfaced from Raspbian as any other webcam. I soldered a push-button and a status LED to two of the RPi&#39;s GPIO pins, and fixed these to the RPi&#39;s case. Using `cron` I run a Python script which monitors the button presses and, depending on whether the printer is connected to the RPi, takes a still or prints the most recently stored picture. This way, several stills can be taken without the printer, and then printed all together.
