@@ -33,7 +33,7 @@
     gap: 20px;
 }
 
-/* Responsive Design */
+/* Styles for small/medium screens */
 @media (max-width: 768px) {
     .navbar a {
         padding: 10px; /* Even smaller padding for mobile */
@@ -49,6 +49,19 @@
     /* Adjust grid for two columns on mobile */
     .projects-grid {
         grid-template-columns: repeat(2, minmax(80px, 0.5fr));
+    }
+}
+
+/* Styles for very small screens */
+@media (max-width: 480px) {
+    .projects-grid {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+
+    .project-item img {
+        width: 150px; /* Fixed width */
+        height: auto;
+        max-width: none;
     }
 }
 
