@@ -41,7 +41,9 @@
     }
 
     .project-item img {
-        width: 100%;
+        width: 150px; /* Fixed width for mobile */
+        height: auto;
+        max-width: none; /* Override max-width if previously set */
     }
 
     /* Adjust grid for two columns on mobile */
