@@ -1,12 +1,16 @@
+/* Base Styles */
 .navbar {
     display: flex;
     justify-content: center;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    overflow-x: auto;  /* Enable horizontal scrolling if needed */
 }
 
 .navbar a {
-    padding: 14px 20px;
+    padding: 14px 10px; /* Reduced horizontal padding */
     text-decoration: none;
     text-align: center;
+    white-space: nowrap; /* Prevent text wrapping within links */
 }
 
 .project-item {
@@ -27,4 +31,35 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
     gap: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar a {
+        padding: 10px; /* Even smaller padding for mobile */
+        flex-direction: column;
+    }
+
+    .project-item img {
+        width: 100%;
+    }
+
+    /* Adjust grid for two columns on mobile */
+    .projects-grid {
+        grid-template-columns: repeat(2, minmax(80px, 0.5fr));
+    }
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+/* HTML5 hidden-attribute fix */
+*[hidden] {
+    display: none;
 }
