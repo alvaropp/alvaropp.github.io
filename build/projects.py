@@ -61,7 +61,7 @@ def extract_data_from_markdown(file_path):
     }
 
 
-output_folder = Path("output/projects/")
+output_folder = Path("docs/projects/")
 output_folder.mkdir(parents=True, exist_ok=True)
 
 projects = [extract_data_from_markdown(file) for file in project_files]

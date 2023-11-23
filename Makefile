@@ -8,11 +8,14 @@ setup:
 		pip install -r requirements.txt; \
 	fi
 
-# Create output directory and copy necessary files
+# Create docs/ directory and copy necessary files
+# it would be nice to call it output/ or similar but github pages
+# requires a docs/ directory
 copy:
-	mkdir -p output
-	cp -r imgs output/
-	cp index.html output/
+	mkdir -p docs
+	cp -r imgs docs/
+	cp index.html docs/
+	cp CNAME docs/
 
 # Create static website
 build:

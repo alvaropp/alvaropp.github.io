@@ -40,7 +40,7 @@ def generate_html_for_grid(directory):
     return html
 
 
-output_folder = Path("output")
+output_folder = Path("docs")
 output_folder.mkdir(parents=True, exist_ok=True)
 
 env = Environment(loader=FileSystemLoader("templates"), autoescape=True)
