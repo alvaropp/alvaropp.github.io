@@ -9,16 +9,22 @@
     text-align: center;
 }
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
-    gap: 20px;
-}
-
 .project-item {
     text-align: center;
 }
 
 .project-item p {
     margin-top: 10px;
+}
+
+.project-item img {
+    width: 80%;
+    height: auto;
+    max-height: 150px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+    gap: 20px;
 }
