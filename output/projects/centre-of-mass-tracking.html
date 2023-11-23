@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Centre of Mass Tracking</title>
+    <style>
+        .navbar {
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar a {
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+            gap: 20px;
+        }
+
+        .project-item {
+            text-align: center;
+        }
+
+        .project-item p {
+            margin-top: 10px;
+        }
+    </style>
+    <link rel="shortcut icon" href="../imgs/favicon.ico">
+</head>
+<body>
+    **[Dr. Alvaro Perez-Diaz](https://alvarop.me)**
+    _Researcher & Data Scientist_
+    _Senseye Predictive Maintenance, Siemens_
+
+    <div class="navbar">
+        <a href="https://alvarop.me/projects.html">Projects</a>
+        <a href="https://scholar.google.com/citations?user=EQCORCgAAAAJ&hl=en" target="_blank">Publications</a>
+        <a href="https://www.linkedin.com/in/alvaro-perez-diaz/" target="_blank">CV</a>
+        <a href="https://github.com/alvaropp" target="_blank">Github</a>
+    </div>
+
+    (#) Centre of Mass Tracking: <em>slacklining!</em>
+
+    <p>A small computer vision project to show that the centre of mass of someone walking on a slackline stays fixed vertically on top of the line (unless you fall!). By employing Python and OpenCV we are able to track an approximation of the centre of mass of a person slacklining in a video.</p>
+
+    <p>Skills: Python, OpenCV, Jupyter notebooks, physics.</p>
+
+    
+    <p>How-to: example videos and code below.</p>
+    
+
+    
+
+    
+    
+    
+    <img src="https://user-images.githubusercontent.com/4785303/37111220-106c5d7e-2237-11e8-8ba0-3f2fb095fd88.jpeg" alt="Centre of Mass Tracking">
+    
+
+    <p>[OpenCV](https://opencv.org/) is an open source computer vision library which can be interfaced from Python. It provides lots of functionalities and is very powerful.
+
+In this project we are interested in studying the center of mass of a person standing on a slackline. The key point is that the center of mass anybody on a slackline stays vertically on top of the contact point of the foot with the line itself, even when limbs are waving around. This can be tested empirically by recording someone walking on the line and employing OpenCV to detect body contours and find the geometric centroid of the person&#39;s body.
+
+As a rough example, I recorded myself walking on the line:
+
+
+```python
+YouTubeVideo(&#39;fL3lAojlZY8&#39;, width=700, height=400)
+```
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/fL3lAojlZY8?si=hIsnCraksX_GRvOO&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+Ideally, you want to wear clothes with different colours from the background, as it makes contour detection much easier. In the example video above, I achieved this partially. The blue coat is generally easy to detect, however, some shadows make it black in some areas and some detail is lost. Similarly with the jeans, they look quite black and white, hence their detection needs more care. Until I get the chance to record a better video, we will focus on detecting the upper body only, which usually provides a decent approximation.
+
+(###) Import necessary libraries
+
+```python
+%matplotlib inline
+import cv2
+import imutils
+import numpy as np
+import time
+import matplotlib.pyplot as plt
+from matplotlib import rcParams
+rcParams[&#39;figure.figsize&#39;] = [15, 10]
+from IPython.lib.display import YouTubeVideo
+```
+
+(###) Test contour selection
+
+First, we will try the contour detection on a still frame from the example video. Many sophisticated contour detection techniques exist, which are outside of the scope of this short example. We will focus on colour detection, where we specify a range of RGB colours to look for, and an area of the image to do so (computationally cheaper and quicker).
+
+In our case, we want the colour range to contain most blues, and little else. For the image area, we will broadly select the range of pixels that contain the body.
+
+```python
+testFile = &#39;./pick_colours/test1.png&#39;
+boundaries = [([75, 0, 0], [255, 255, 70])] # OpenCV uses BGR, not RGB!
+sizes = [80, 400, 400, 800]                 # In pixels
+
+scale = 1
+image = cv2.imread(testFile)
+image = cv2.resize(image, (0, 0), fx=1./scale, fy=1./scale)
+height, width, channels = image.shape
+imageCropped = image[int(sizes[0]/scale):int(sizes[1]/scale),
+                     int(sizes[2]/scale):int(sizes[3]/scale)]
+
+plt.figure(figsize=(10,5))
+plt.imshow(cv2.cvtColor(imageCropped, cv2.COLOR_BGR2RGB))
+plt.title(&#34;Image cropped to show only the body&#34;)
+plt.show()
+```
+
+&lt;div class=&#34;img_single&#34;&gt;
+    &lt;img class=&#34;col two&#34; src=&#34;https://user-images.githubusercontent.com/4785303/36992242-3d722e66-20a2-11e8-84b5-aba6109cc123.png&#34;/&gt;
+&lt;/div&gt;
+
+
+```python
+lower = np.array(boundaries[0][0], dtype = &#34;uint8&#34;)
+upper = np.array(boundaries[0][1], dtype = &#34;uint8&#34;)
+
+# Crop the image, process only the cropped bit
+mask = cv2.inRange(imageCropped, lower, upper)
+mask[mask != 0] = 1
+imageCropped[mask==1, 0] = 0
+imageCropped[mask==1, 1] = 255
+imageCropped[mask==1, 2] = 0
+image[int(sizes[0]/scale):int(sizes[1]/scale),
+      int(sizes[2]/scale):int(sizes[3]/scale)] = imageCropped
+
+# Find blue contours (coat)
+cnts = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+cnts = cnts[0] if imutils.is_cv2() else cnts[1]
+for c in cnts:
+    # Retain only large enough contours, this deletes outliers
+    if cv2.contourArea(c) &gt; 3000:
+        c[:,0,0] += int(sizes[2]/scale)
+        c[:,0,1] += int(sizes[0]/scale)
+        # Compute the center of the contour
+        M = cv2.moments(c)
+        cX = int(M[&#34;m10&#34;] / M[&#34;m00&#34;])
+        cY = int(M[&#34;m01&#34;] / M[&#34;m00&#34;])
+        # Draw the contour and center of the shape on the image
+        cv2.drawContours(image, [c], -1, (0, 69, 255), 2)
+        cv2.line(image, (cX-15, cY), (cX+15, cY), (0, 0, 255), 2)
+        cv2.line(image, (cX, cY-15), (cX, height), (0, 0, 255), 2)
+
+imageCropped = image[int(sizes[0]/scale):int(sizes[1]/scale),
+                     int(sizes[2]/scale):int(sizes[3]/scale)]
+
+plt.figure(figsize=(10,5))
+plt.imshow(cv2.cvtColor(imageCropped, cv2.COLOR_BGR2RGB))
+plt.title(&#34;Upper body contour detection&#34;)
+plt.show()
+```
+
+&lt;div class=&#34;img_single&#34;&gt;
+    &lt;img class=&#34;col two&#34; src=&#34;https://user-images.githubusercontent.com/4785303/36992243-3dab4138-20a2-11e8-920d-99f0cf4716ce.png&#34;/&gt;
+&lt;/div&gt;
+
+As we can see in the previous image, we can easily obtain a rough upper body contour.  With a better choice of contour detection algorithm (maybe motion detection) and/or brigther clothes (red or orange would be ideal in this example video), a more accurate contour of the body could be obtained.
+
+We can also find the geometric centroid of the contour, which roughly corresponds to its centre of mass (assuming uniform body density, which seems to be a good approximation). We are now ready to embed the cropped image in the full image.
+
+
+```python
+# Frame the cropped image with a white rectangle
+cv2.rectangle(image, (int(sizes[2]/scale), int(sizes[0]/scale)),
+                     (int(sizes[3]/scale), int(sizes[1]/scale)),
+              (255, 255, 255), 3)
+plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
+plt.title(&#34;Full image with upper body contour detection&#34;)
+plt.show()
+```
+
+&lt;div class=&#34;img_single&#34;&gt;
+    &lt;img class=&#34;col three&#34; src=&#34;https://user-images.githubusercontent.com/4785303/36992276-54eda93a-20a2-11e8-84ae-9a1b47e5af97.jpg&#34;/&gt;
+&lt;/div&gt;
+
+(###) Video analysis
+
+So far, we are able to approximately find the centre of gravity in a picture of someone standing on a slackline. This can be easily extended to deal with a video instead.
+
+The key point is that a video is just a sequence of stills (frames), so we can grab each frame of the video, apply the processing described above, and put the resulting image as a frame in an output video.
+
+
+```python
+# Open video
+videoInFile = &#39;./video_tests/clip1.mp4&#39;
+videoIn = cv2.VideoCapture(videoInFile)
+
+# Find width and height
+w = videoIn.get(cv2.CAP_PROP_FRAME_WIDTH);
+h = videoIn.get(cv2.CAP_PROP_FRAME_HEIGHT);
+
+# The video can be scaled down to reduce computing time
+scale = 1
+fps = 30
+minContourSize = 3000
+capSize = (int(w/scale), int(int(h/scale)/2))
+
+# Output video
+fourcc = cv2.VideoWriter_fourcc(&#39;m&#39;, &#39;p&#39;, &#39;4&#39;, &#39;v&#39;)
+videoOut = cv2.VideoWriter(&#39;output.mp4&#39;, fourcc, fps, (int(w),int(h)))
+
+# Define the list of boundaries: blue (coat)
+boundaries = [([75, 0, 0], [255, 255, 70])]
+# Window frames for each colour
+sizes = [[80, 400, 400, 800]]
+# Centroid coordinates and masses
+centroids = np.zeros([len(boundaries), 2], dtype=int)
+masses = np.zeros(len(boundaries))
+
+# Iterate over the frames of the video, one by one
+while videoIn.isOpened():
+    # Read frame
+    ret, image = videoIn.read()
+    image = cv2.resize(image, (0, 0), fx=1./scale, fy=1./scale)
+    imageTemp = image.copy()
+    height, width, channels = image.shape
+
+    # Loop over different colours (in our case just one, the blue coat)
+    for j in range(len(boundaries)):
+        imagePart = image[int(sizes[j][0]/scale):int(sizes[j][1]/scale),
+                         int(sizes[j][2]/scale):int(sizes[j][3]/scale)]
+        lower = np.array(boundaries[j][0], dtype = &#34;uint8&#34;)
+        upper = np.array(boundaries[j][1], dtype = &#34;uint8&#34;)
+        mask = cv2.inRange(imagePart, lower, upper)
+        imageTemp[int(sizes[j][0]/scale):int(sizes[j][1]/scale),
+               int(sizes[j][2]/scale):int(sizes[j][3]/scale)] = imagePart
+        # Find contours
+        cnts = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE) # _NONE
+        cnts = cnts[0] if imutils.is_cv2() else cnts[1]
+        for c in cnts:
+            if cv2.contourArea(c) &gt; minContourSize/scale:
+                c[:,0,0] += int(sizes[j][2]/scale)
+                c[:,0,1] += int(sizes[j][0]/scale)
+                # Compute the center of the contour
+                M = cv2.moments(c)
+                cX = int(M[&#34;m10&#34;] / M[&#34;m00&#34;])
+                cY = int(M[&#34;m01&#34;] / M[&#34;m00&#34;])
+                centroids[j] = np.array([cX, cY])
+                masses[j] = cv2.contourArea(c)
+                # Draw the contour and center of the shape on the image
+                cv2.drawContours(imageTemp, [c], -1, (0, 69, 255), 2)
+
+    for j in range(len(boundaries)):
+        # Add window frames to the image to check
+        cv2.rectangle(imageTemp, (int(sizes[j][2]/scale), int(sizes[j][0]/scale)),
+                      (int(sizes[j][3]/scale), int(sizes[j][1]/scale)),
+                      (255, 255, 255), 1)
+        # Draw centroid lines
+        cv2.line(imageTemp, (centroids[j][0]-15, centroids[j][1]), (centroids[j][0]+15, centroids[j][1]), (255, 255, 255), 1)
+        cv2.line(imageTemp, (centroids[j][0], centroids[j][1]-15), (centroids[j][0], height), (255, 255, 255), 1)
+
+    # Compute mean centroid using contour centroids and their respective masses
+    mult = masses/sum(masses)
+    centroidTotal = sum((centroids.T * mult).T, 0)
+
+    try:
+        cv2.line(imageTemp, (int(centroidTotal[0])-15, int(centroidTotal[1])), (int(centroidTotal[0])+15, int(centroidTotal[1])), (0, 0, 255), 2)
+        cv2.line(imageTemp, (int(centroidTotal[0]), int(centroidTotal[1])-15), (int(centroidTotal[0]), height), (0, 0, 255), 2)
+    except:
+        pass
+    # Write frame to videoOut
+    videoOut.write(imageTemp)
+
+# Clean up
+cv2.destroyAllWindows()
+videoIn.release()
+videoOut.release()
+```
+
+Depending on the length and resolution of the video, this analysis can take a while. When the code finishes, we should have our output video file ready. Mine looks like this:
+
+
+```python
+YouTubeVideo(&#39;2epc_1mojQs&#39;, width=700, height=400)
+```
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/2epc_1mojQs?si=5ABMNHu_zi7xvPyp&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;br&gt;
+
+We can see that our approximated centre of mass roughly stays centred on top of the line. Of course, contour detection is not great in this example, as shadows are not captured in the coat. Also, the legs play a significant role in balance, and were not captured in our example. As mentioned earlier, with a bit of care, one could use motion detection, or combine black and white contours to pick up the legs and include them in the analysis. Orange leggings would also do the trick!
+
+&lt;hr&gt;
+
+&lt;img alt=&#34;Creative Commons License&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by/4.0/88x31.png&#34;/&gt;
+</p>
+</body>
+
+</html>
+
+<!-- Markdeep: --><style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="markdeep.min.js" charset="utf-8"></script><script src="https://morgan3d.github.io/markdeep/latest/markdeep.min.js" charset="utf-8"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>

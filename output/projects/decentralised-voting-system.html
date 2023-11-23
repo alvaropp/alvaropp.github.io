@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Decentralised Voting System</title>
+    <style>
+        .navbar {
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar a {
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+            gap: 20px;
+        }
+
+        .project-item {
+            text-align: center;
+        }
+
+        .project-item p {
+            margin-top: 10px;
+        }
+    </style>
+    <link rel="shortcut icon" href="../imgs/favicon.ico">
+</head>
+<body>
+    **[Dr. Alvaro Perez-Diaz](https://alvarop.me)**
+    _Researcher & Data Scientist_
+    _Senseye Predictive Maintenance, Siemens_
+
+    <div class="navbar">
+        <a href="https://alvarop.me/projects.html">Projects</a>
+        <a href="https://scholar.google.com/citations?user=EQCORCgAAAAJ&hl=en" target="_blank">Publications</a>
+        <a href="https://www.linkedin.com/in/alvaro-perez-diaz/" target="_blank">CV</a>
+        <a href="https://github.com/alvaropp" target="_blank">Github</a>
+    </div>
+
+    (#) Decentralised Voting System: <em>on blockchain</em>
+
+    <p>An experiment about using blockchain for decentralised voting using the Ethereum. In more detail, white-listed users can vote for one of the candidates using a web app, and a smart contract keeps track of the votes. This was built as part of a one-day &lt;a href=&#34;https://www.aic.ecs.soton.ac.uk/&#34; target=&#34;_blank&#34;&gt;AIC&lt;/a&gt; hackathon with several colleagues. </p>
+
+    <p>Skills: Python, blockchain, Ethereum, Solidity, HTML, js.</p>
+
+    
+    <p>How-to: code available on &lt;a href=&#34;https://github.com/dorotafilipczuk/blockchain-voting-system&#34; target=&#34;_blank&#34;&gt;GitHub&lt;/a&gt;.</p>
+    
+
+    
+
+    
+    
+    
+    <img src="https://user-images.githubusercontent.com/4785303/40201815-192cff04-5a18-11e8-8fa8-53e81c4631ca.png" alt="Decentralised Voting System">
+    
+
+    <p>Blockchain has introduced a new ecosystem of decentralised and transparent applications, running without a central authority and providing high guarantees against tampering. During a one-day hackathon at the University of Southampton, we decided to implement a stereotypical example in order to learn more about blockchain: a voting application implemented in  &lt;a href=&#34;https://www.ethereum.org/&#34; target=&#34;_blank&#34;&gt;Ethereum&lt;/a&gt;.
+
+The proposed framework consists of three components:
+- A private Ethereum test blockchain running on &lt;a href=&#34;https://github.com/trufflesuite/ganache&#34; target=&#34;_blank&#34;&gt;Ganache&lt;/a&gt;.
+- A smart contract taking care of voter identity and vote counts, implemented using  &lt;a href=&#34;https://solidity.readthedocs.io/en/v0.4.24/&#34; target=&#34;_blank&#34;&gt;Solidity&lt;/a&gt;. It *heavily* borrows from an example in the Solidity docs, but it has a couple more features: a white-list of of voters and max one vote per voter.
+- A web app where voters can type their public address, cast their vote and see real-time vote counts.
+
+For the demo, the idea was to give people printouts with a public address of the blockchain, which they could then use to login in the web app and cast their vote. Of course, this project was quick, exploratory work. The resulting web app and smart contract are not safe for real use, but work fine for illustrative purposes.
+
+&lt;div class=&#34;img_single&#34;&gt;
+    &lt;img class=&#34;col three&#34; src=&#34;https://user-images.githubusercontent.com/4785303/40201943-76e3ca9c-5a18-11e8-9f1c-177af60c4726.png&#34;/&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+
+![](https://img.shields.io/badge/License-MIT-yellow.svg)
+</p>
+</body>
+
+</html>
+
+<!-- Markdeep: --><style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="markdeep.min.js" charset="utf-8"></script><script src="https://morgan3d.github.io/markdeep/latest/markdeep.min.js" charset="utf-8"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>

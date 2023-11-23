@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Interactive Fluid Simulation</title>
+    <style>
+        .navbar {
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar a {
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+            gap: 20px;
+        }
+
+        .project-item {
+            text-align: center;
+        }
+
+        .project-item p {
+            margin-top: 10px;
+        }
+    </style>
+    <link rel="shortcut icon" href="../imgs/favicon.ico">
+</head>
+<body>
+    **[Dr. Alvaro Perez-Diaz](https://alvarop.me)**
+    _Researcher & Data Scientist_
+    _Senseye Predictive Maintenance, Siemens_
+
+    <div class="navbar">
+        <a href="https://alvarop.me/projects.html">Projects</a>
+        <a href="https://scholar.google.com/citations?user=EQCORCgAAAAJ&hl=en" target="_blank">Publications</a>
+        <a href="https://www.linkedin.com/in/alvaro-perez-diaz/" target="_blank">CV</a>
+        <a href="https://github.com/alvaropp" target="_blank">Github</a>
+    </div>
+
+    (#) Interactive Fluid Simulation: <em>on Twitter!</em>
+
+    <p>This project builds upon the great &lt;a href=&#34;https://github.com/ngcm/interactive-fluid-demo&#34; target=&#34;_blank&#34;&gt;fluid flow simulation&lt;/a&gt; developed by &lt;a href=&#34;http://cmg.soton.ac.uk/people/gmd1n15/&#34; target=&#34;_blank&#34;&gt;Gary Downing&lt;/a&gt; as an &lt;a href=&#34;http://ngcm.soton.ac.uk&#34; target=&#34;_blank&#34;&gt;NGCM&lt;/a&gt; outreach show. This fluid simulation software takes real input from a web-cam and runs a fluid simulation on top of the real-time images, where fluid comes from the left-hand side of the screen and is affected by the present objects on its way. This has been proven very successful in previous outreach events from the University of Southampton. For this year&#39;s University of Southampton Science and Engineering Festival 2018, and any other outreach events, I made a simple extension which integrates with Twitter. Basically, any participant can send a custom image or drawing to our Twitter account &lt;a href=&#34;https://twitter.com/FluidFlowTest&#34; target=&#34;_blank&#34;&gt;@FluidFlowTest&lt;/a&gt;, and will instantly receive a GIF with the fluid simulation on top of their image in return.</p>
+
+    <p>Skills: Python, Twitter API, virtual machines.</p>
+
+    
+    <p>How-to: code available on &lt;a href=&#34;https://github.com/alvaropp/interactive-fluid-twitter&#34; target=&#34;_blank&#34;&gt;GitHub&lt;/a&gt;.</p>
+    
+
+    
+
+    
+    
+    
+    <img src="https://user-images.githubusercontent.com/4785303/35059288-8757857c-fbb2-11e7-9b96-b0d32f02744f.gif" alt="Interactive Fluid Simulation">
+    
+
+    <p>&lt;div class=&#34;img_single&#34;&gt;
+    &lt;img class=&#34;col three&#34; src=&#34;https://user-images.githubusercontent.com/4785303/35060001-eb033510-fbb4-11e7-8d14-384632987b6b.gif&#34;/&gt;
+&lt;/div&gt;
+
+&lt;br&gt;
+
+This software uses &lt;a href=&#34;https://github.com/tweepy/tweepy&#34; target=&#34;_blank&#34;&gt;Tweepy&lt;/a&gt; to implement a Twitter stream listener which captures tweets that mention our Twitter account. When one such tweet is received, the software automatically tries to retrieve an attached image, which is then used to run the fluid simulation. Several stills of this simulation are captured and built into a GIF, which is then tweeted back at the user.
+
+&lt;hr&gt;
+
+![](https://img.shields.io/badge/License-MIT-yellow.svg)
+</p>
+</body>
+
+</html>
+
+<!-- Markdeep: --><style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="markdeep.min.js" charset="utf-8"></script><script src="https://morgan3d.github.io/markdeep/latest/markdeep.min.js" charset="utf-8"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
