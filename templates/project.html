@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="../imgs/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
     **[Dr. Alvaro Perez-Diaz](https://alvarop.me)**
     _Researcher & Data Scientist_
@@ -23,20 +24,22 @@
 
     <p>{{ project.brief }}</p>
 
-    <p>Skills: {{ project.skills }}</p>
+    <div class="project-info">
+        <p>Skills: {{ project.skills }}</p>
 
-    {% if project.how_to != ""%}
-    <p>How-to: {{project.how_to}}</p>
-    {% endif %}
+        {% if project.how_to != ""%}
+        <p>How-to: {{project.how_to}}</p>
+        {% endif %}
 
-    {% if project.featured != ""%}
-    <p>Featured: {{project.featured}}</p>
-    {% endif %}
+        {% if project.featured != ""%}
+        <p>Featured: {{project.featured}}</p>
+        {% endif %}
 
-    {% if project.awards != ""%}
-    <p>Awards: {{project.awards}}</p>
-    {% endif %}
-    
+        {% if project.awards != ""%}
+        <p>Awards: {{project.awards}}</p>
+        {% endif %}
+    </div>
+
     {% if project.big_img_url != ""%}
     <img src="{{ project.big_img_url }}" alt="{{ project.title }}">
     {% elif project.img_url != ""%}

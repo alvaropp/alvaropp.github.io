@@ -13,6 +13,10 @@
     white-space: nowrap; /* Prevent text wrapping within links */
 }
 
+.project-info {
+    color: #636363;
+}
+
 .project-item {
     text-align: center;
 }
