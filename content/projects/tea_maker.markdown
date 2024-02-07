@@ -8,6 +8,7 @@ img: https://user-images.githubusercontent.com/4785303/34652579-4925d16e-f3d8-11
 skills: Arduino, making.
 featured: <a href="http://www.wired.co.uk/article/automate-your-own-tea-maker">Wired UK Magazine May 2015</a>, <a href="https://blog.adafruit.com/2015/01/12/create-your-own-automated-tea-maker-with-arduino/" target="_blank">Adafruit</a>, <a href="https://hackaday.com/2015/01/28/automated-tea-maker/" target="_blank">Hackaday</a>, Instructables main page.
 how-to: full build instructions on <a href="https://www.instructables.com/id/DIY-Automated-Tea-Maker/" target="_blank">Instructables</a>, code available on <a href="https://github.com/alvaropp/teamaker" target="_blank">GitHub</a>.
+type: hardware
 ---
 
 <br>

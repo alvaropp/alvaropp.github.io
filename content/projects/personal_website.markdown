@@ -8,6 +8,7 @@ brief: A simple and clean personal website to showcase my work, both academic an
 img: https://user-images.githubusercontent.com/4785303/36445508-6715b994-1676-11e8-8e04-b075b60711e1.png
 big_img: https://user-images.githubusercontent.com/4785303/36446177-7057b834-1678-11e8-9fdf-091247a9649f.png
 how-to: code available on <a href="https://github.com/alvaropp/alvaropp.github.io" target="_blank">GitHub</a>.
+type: software
 ---
 
 <hr>

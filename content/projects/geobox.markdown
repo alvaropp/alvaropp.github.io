@@ -7,6 +7,7 @@ brief: Fun birthday present based on <a href="http://www.sundial.com/" target="_
 img: https://user-images.githubusercontent.com/4785303/57459450-30f5e800-726b-11e9-8455-c01724ee50ca.png
 skills: Making, Electronics, Arduino.
 big_img: https://user-images.githubusercontent.com/4785303/57458453-479b3f80-7269-11e9-8038-207870ebd43e.jpg
+type: hardware
 ---
 
 Originally conceived a few years ago, these reverse geocaching boxes have acquired quite a lot of popularity and full builds and DIY kits are sold by the folks of <a href="http://www.sundial.com/" target="_blank">sundial.com</a>. However, when browsing online for inspiration to make my own, I realised that all the boxes I could find had a single secret destination. While this may be enough for some purposes, I wanted to build a longer quest that took my girlfriend to a few nice places and I ended up expanding the original box with three extra destinations, for a total of four.

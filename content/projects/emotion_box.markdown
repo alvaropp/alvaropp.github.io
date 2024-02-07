@@ -8,6 +8,7 @@ img: https://user-images.githubusercontent.com/4785303/34652569-2f0844b0-f3d8-11
 skills: Arduino, making, IoT.
 featured: <a href="https://makezine.com/2016/04/04/the-emotionbox-uses-blynk-to-connect-long-distance-partners/" target="_blank">Make Magazine</a>, Instructables main page.
 how-to: full build instructions on <a href="https://www.instructables.com/id/EmotionBox/" target="_blank">Instructables</a>, code available on <a href="https://github.com/alvaropp/EmotionBox" target="_blank">GitHub</a>.
+type: hardware
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6Z7FFeKUdfk?si=vOIigjbmSFYnHUSl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

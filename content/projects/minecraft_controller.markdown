@@ -8,6 +8,7 @@ brief: When organising <a href="../projects/outreach-events.html" target="_blank
 img: https://user-images.githubusercontent.com/4785303/34828173-9a83f94c-f6d4-11e7-8f2d-e8510abc82db.jpg
 big_img: https://user-images.githubusercontent.com/4785303/34828061-2c7ef4b0-f6d4-11e7-9838-bb70f406e98b.jpg
 how-to: code available on <a href="https://github.com/alvaropp/MinecraftController" target="_blank">GitHub</a>.
+type: hardware
 ---
 
 <span style="font-size: 0.65em; float: right">Image created by me out of the following free resources:

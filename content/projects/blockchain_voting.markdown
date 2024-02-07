@@ -8,6 +8,7 @@ img: https://user-images.githubusercontent.com/4785303/40201649-91fca2aa-5a17-11
 skills: Python, blockchain, Ethereum, Solidity, HTML, js.
 how-to: code available on <a href="https://github.com/dorotafilipczuk/blockchain-voting-system" target="_blank">GitHub</a>.
 big_img: https://user-images.githubusercontent.com/4785303/40201815-192cff04-5a18-11e8-8fa8-53e81c4631ca.png
+type: software
 ---
 
 Blockchain has introduced a new ecosystem of decentralised and transparent applications, running without a central authority and providing high guarantees against tampering. During a one-day hackathon at the University of Southampton, we decided to implement a stereotypical example in order to learn more about blockchain: a voting application implemented in  <a href="https://www.ethereum.org/" target="_blank">Ethereum</a>.

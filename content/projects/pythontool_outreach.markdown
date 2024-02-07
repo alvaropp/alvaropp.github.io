@@ -9,6 +9,7 @@ img: https://user-images.githubusercontent.com/4785303/35053247-71f0fd8c-fba1-11
 big_img: https://user-images.githubusercontent.com/4785303/35053248-720bb276-fba1-11e7-852c-e0ff8f8d3ef4.jpg
 awards: The <i>Best new activity</i> award at the University of Southampton Science and Engineering Festival 2017 was given to all <a href="http://ngcm.soton.ac.uk/">NGCM</a> participants and activities, including the workshop with PythonTool-Mod.
 how-to: workshop materials available on <a href="https://github.com/alvaropp/PythonTool_outreach" target="_blank">GitHub</a>.
+type: software
 ---
 
 <span style="font-size: 0.65em; float: right">Image courtesy of the <a href="http://ngcm.soton.ac.uk/blog/2017-02-23/winchester-science-centre-minecraft-with-python.html" target="_ blank">NGCM blog</a>.

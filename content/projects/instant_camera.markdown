@@ -7,6 +7,7 @@ brief: An instant camera, Polaroid style. It consists of three separate parts. N
 img: https://user-images.githubusercontent.com/4785303/36443949-1e8acaba-1672-11e8-8431-a8dba6e2ba0d.jpg
 big_img: https://user-images.githubusercontent.com/4785303/36443946-1e2a4aa0-1672-11e8-83c6-b30d27f6784d.jpg
 skills: Raspberry Pi, Python, making.
+type: hardware
 ---
 
 The thermal printer itself is a <a href="http://www.pipsta.co.uk/" target="_blank">Pipsta</a>, which comes with support for the Raspberry Pi, and plenty of <a href="https://bitbucket.org/ablesystems/pipsta/overview" target="_blank">code examples</a>. On the camera side, it is a nearly-bricked <a href="https://sjcam.com/product/sj4000/" target="_blank">SJ4000</a>, which can be interfaced from Raspbian as any other webcam. I soldered a push-button and a status LED to two of the RPi's GPIO pins, and fixed these to the RPi's case. Using `cron` I run a Python script which monitors the button presses and, depending on whether the printer is connected to the RPi, takes a still or prints the most recently stored picture. This way, several stills can be taken without the printer, and then printed all together.

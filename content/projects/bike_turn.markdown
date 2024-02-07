@@ -10,6 +10,7 @@ skills: Arduino, making.
 featured: Instructables main page.
 awards: second prize in Instructables' <a href="https://www.instructables.com/contest/bike2016/" target="_blank">2016 Bicycle Contest</a>.
 how-to: full build instructions on <a href="https://www.instructables.com/id/DIY-Bicycle-Turn-Signal/" target="_blank">Instructables</a>.
+type: hardware
 ---
 
 <br>The device can be built very cheap as it employs simple analogue electronics. Specifically, an astable multivibrator with two transistor-capacitor pairs generates the blinking behaviour. Plain red or orange LEDs are quite bright at night if adequately pointed towards cars behind the cyclist.<br>

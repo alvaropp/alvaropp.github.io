@@ -40,10 +40,14 @@
         {% endif %}
     </div>
 
-    {% if project.big_img_url != ""%}
-    <img src="{{ project.big_img_url }}" alt="{{ project.title }}">
-    {% elif project.img_url != ""%}
-    <img src="{{ project.img_url }}" alt="{{ project.title }}">
+    {% if project.no_img != "True"%}
+        {% if project.big_img_url != ""%}
+        <img src="{{ project.big_img_url }}" alt="{{ project.title }}">
+        {% elif project.img_url != ""%}
+        <img src="{{ project.img_url }}" alt="{{ project.title }}">
+        {% endif %}
+    {% else %}
+        <hr>
     {% endif %}
 
     <p>{{ project.text }}</p>

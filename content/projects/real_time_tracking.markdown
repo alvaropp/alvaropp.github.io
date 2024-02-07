@@ -7,6 +7,7 @@ brief: Easily track location and progress along a given route with the idea of b
 img: https://user-images.githubusercontent.com/4785303/104010194-0c6eb380-51a4-11eb-9564-5ac11df666ef.jpg
 skills: js, Leaflet, Python, Flask.
 big_img: https://user-images.githubusercontent.com/4785303/104010342-4344c980-51a4-11eb-920c-fdf64beb573a.jpg
+type: software
 ---
 
 <br> The idea is to be able to track a runner or cyclist along a route in real-time in order to be able to meet along the way or to pick them up at the end. While there are some companies that offer this kind of service, I didn't find anything that worked well (tried a couple of apps) and thought that this should be easy to build and maintain.

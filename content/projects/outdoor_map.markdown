@@ -7,7 +7,8 @@ brief: Easily manage and visualise a database of GPS data, including waypoints a
 img: https://user-images.githubusercontent.com/4785303/37111108-d2fe9f7e-2236-11e8-8d3c-04fb6c1992bd.jpeg
 skills: Python, Folium, Jupyter notebooks.
 how-to: code available below.
-no_img: yes
+type: software
+no_img: True
 ---
 
 The idea is to manage a long-term database of waypoints and routes, and to allow interactive exploration on an actual map. In order to guarantee long-term compatibility and to minimise the risk of loss, the waypoints and routes can be stored as `csv` and `gpx` files, locally or in the cloud.

@@ -7,7 +7,8 @@ brief: A small computer vision project to show that the centre of mass of someon
 img: https://user-images.githubusercontent.com/4785303/37111220-106c5d7e-2237-11e8-8ba0-3f2fb095fd88.jpeg
 skills: Python, OpenCV, Jupyter notebooks, physics.
 how-to: example videos and code below.
-no_img: yes
+no_img: True
+type: software
 ---
 
 [OpenCV](https://opencv.org/) is an open source computer vision library which can be interfaced from Python. It provides lots of functionalities and is very powerful.

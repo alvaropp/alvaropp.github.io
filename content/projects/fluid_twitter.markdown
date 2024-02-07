@@ -8,6 +8,7 @@ brief: This project builds upon the great <a href="https://github.com/ngcm/inter
 img: https://user-images.githubusercontent.com/4785303/35472499-352d9ee0-0368-11e8-83ca-f20c6c2cc1ea.png
 big_img: https://user-images.githubusercontent.com/4785303/35059288-8757857c-fbb2-11e7-9b96-b0d32f02744f.gif
 how-to: code available on <a href="https://github.com/alvaropp/interactive-fluid-twitter" target="_blank">GitHub</a>.
+type: software
 ---
 
 <div class="img_single">

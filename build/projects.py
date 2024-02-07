@@ -28,6 +28,7 @@ def extract_data_from_markdown(file_path):
     brief_match = re.search(r"brief: (.+)", content)
     img_match = re.search(r"img: (.+)", content)
     big_img_match = re.search(r"big_img: (.+)", content)
+    no_img_match = re.search(r"no_img: (.+)", content)
     skills = re.search(r"skills: (.+)", content)
     how_to = re.search(r"how-to: (.+)", content)
     featured = re.search(r"featured: (.+)", content)
@@ -40,6 +41,7 @@ def extract_data_from_markdown(file_path):
     brief = brief_match[1] if brief_match else ""
     img_url = img_match[1] if img_match else ""
     big_img_url = big_img_match[1] if big_img_match else ""
+    no_img = no_img_match[1] if no_img_match else ""
     skills = skills[1] if skills else ""
     how_to = how_to[1] if how_to else ""
     featured = featured[1] if featured else ""
@@ -53,6 +55,7 @@ def extract_data_from_markdown(file_path):
         "brief": brief,
         "img_url": img_url,
         "big_img_url": big_img_url,
+        "no_img": no_img,
         "skills": skills,
         "how_to": how_to,
         "featured": featured,

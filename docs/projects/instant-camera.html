@@ -35,7 +35,9 @@
     </div>
 
     
-    <img src="https://user-images.githubusercontent.com/4785303/36443946-1e2a4aa0-1672-11e8-83c6-b30d27f6784d.jpg" alt="Instant camera">
+        
+        <img src="https://user-images.githubusercontent.com/4785303/36443946-1e2a4aa0-1672-11e8-83c6-b30d27f6784d.jpg" alt="Instant camera">
+        
     
 
     <p>The thermal printer itself is a &lt;a href=&#34;http://www.pipsta.co.uk/&#34; target=&#34;_blank&#34;&gt;Pipsta&lt;/a&gt;, which comes with support for the Raspberry Pi, and plenty of &lt;a href=&#34;https://bitbucket.org/ablesystems/pipsta/overview&#34; target=&#34;_blank&#34;&gt;code examples&lt;/a&gt;. On the camera side, it is a nearly-bricked &lt;a href=&#34;https://sjcam.com/product/sj4000/&#34; target=&#34;_blank&#34;&gt;SJ4000&lt;/a&gt;, which can be interfaced from Raspbian as any other webcam. I soldered a push-button and a status LED to two of the RPi&#39;s GPIO pins, and fixed these to the RPi&#39;s case. Using `cron` I run a Python script which monitors the button presses and, depending on whether the printer is connected to the RPi, takes a still or prints the most recently stored picture. This way, several stills can be taken without the printer, and then printed all together.
