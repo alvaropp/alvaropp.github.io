@@ -4,6 +4,8 @@ from pathlib import Path
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from slugify import slugify
 
+PROJECT_TYPES = ["hardware", "software"]
+
 
 def extract_data_from_md(file_path):
     with open(file_path, "r") as file:
@@ -12,31 +14,42 @@ def extract_data_from_md(file_path):
         date_match = re.search(r"date: (.+)", content)
         title_match = re.search(r"title: (.+)", content)
         img_match = re.search(r"img: (.+)", content)
+        project_type_match = re.search(r"type: (.+)", content)
 
         date = date_match[1] if date_match else ""
         title = title_match[1] if title_match else ""
         img_url = img_match[1] if img_match else ""
-        return date, title, img_url
+        project_type = project_type_match[1] if project_type_match else ""
+
+        return date, title, img_url, project_type
 
 
 def generate_html_for_grid(directory):
-    projects = []
+    projects = {project_type: [] for project_type in PROJECT_TYPES}
+
     for filename in Path(directory).glob("*.markdown"):
-        date, title, img_url = extract_data_from_md(filename)
-        projects.append({"title": title, "img_url": img_url, "date": date})
-
-    projects = sorted(projects, key=lambda x: x["date"], reverse=True)
-
-    html = '<div class="projects-grid">'
-    for project in projects:
-        project_html = (
-            f'<div class="project-item">'
-            f'<a href="projects/{slugify(project["title"])}.html">'
-            f'<img src="{project["img_url"]}" alt="{project["title"]}"></a>'
-            f"<p>{project['title']}</p></div>"
+        date, title, img_url, project_type = extract_data_from_md(filename)
+        projects[project_type].append(
+            {"title": title, "img_url": img_url, "date": date}
         )
-        html += project_html
-    html += "</div>"
+    for project_type in PROJECT_TYPES:
+        projects[project_type] = sorted(
+            projects[project_type], key=lambda x: x["date"], reverse=True
+        )
+
+    html = ""
+    for project_type, projects in projects.items():
+        html += f'<div class="nonumberh2">{project_type.capitalize()}</div>'
+        html += '<div class="projects-grid">'
+        for project in projects:
+            project_html = (
+                f'<div class="project-item">'
+                f'<a href="projects/{slugify(project["title"])}.html">'
+                f'<img src="{project["img_url"]}" alt="{project["title"]}"></a>'
+                f"<p>{project['title']}</p></div>"
+            )
+            html += project_html
+        html += "</div>"
     return html
 
 

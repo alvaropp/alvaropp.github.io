@@ -29,11 +29,12 @@ def extract_data_from_markdown(file_path):
     img_match = re.search(r"img: (.+)", content)
     big_img_match = re.search(r"big_img: (.+)", content)
     no_img_match = re.search(r"no_img: (.+)", content)
-    skills = re.search(r"skills: (.+)", content)
-    how_to = re.search(r"how-to: (.+)", content)
-    featured = re.search(r"featured: (.+)", content)
-    awards = re.search(r"awards: (.+)", content)
-    text = re.search(r"---\n\n(.+)", content, re.DOTALL)
+    skills_match = re.search(r"skills: (.+)", content)
+    how_to_match = re.search(r"how-to: (.+)", content)
+    featured_match = re.search(r"featured: (.+)", content)
+    awards_match = re.search(r"awards: (.+)", content)
+    type_match = re.search(r"type: (.+)", content)
+    text_match = re.search(r"---\n\n(.+)", content, re.DOTALL)
 
     date = date_match[1] if date_match else ""
     title = title_match[1] if title_match else ""
@@ -42,11 +43,15 @@ def extract_data_from_markdown(file_path):
     img_url = img_match[1] if img_match else ""
     big_img_url = big_img_match[1] if big_img_match else ""
     no_img = no_img_match[1] if no_img_match else ""
-    skills = skills[1] if skills else ""
-    how_to = how_to[1] if how_to else ""
-    featured = featured[1] if featured else ""
-    awards = awards[1] if awards else ""
-    text = text[1] if text else ""
+    skills = skills_match[1] if skills_match else ""
+    how_to = how_to_match[1] if how_to_match else ""
+    featured = featured_match[1] if featured_match else ""
+    awards = awards_match[1] if awards_match else ""
+    if type_match:
+        _type = type_match[1]
+    else:
+        raise ValueError(f"`type` field not found in project: {file_path}")
+    text = text_match[1] if text_match else ""
 
     return {
         "date": date,
@@ -61,6 +66,7 @@ def extract_data_from_markdown(file_path):
         "featured": featured,
         "awards": awards,
         "text": text,
+        "type": _type,
     }
 
 
