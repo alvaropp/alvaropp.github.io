@@ -1,3 +1,11 @@
+# /// script
+# requires-python = ">=3.8"
+# dependencies = [
+#     "jinja2==3.1.6",
+#     "python-slugify==8.0.1",
+# ]
+# ///
+
 # %%
 import re
 

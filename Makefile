@@ -1,12 +1,4 @@
-all: setup copy build
-
-# Setup virtual environment and install requirements
-setup:
-	@if [ ! -d ".venv" ]; then \
-		python3 -m venv .venv && \
-		source .venv/bin/activate && \
-		pip install -r requirements.txt; \
-	fi
+all: copy build
 
 # Create docs/ directory and copy necessary files
 # it would be nice to call it output/ or similar but github pages
@@ -20,7 +12,7 @@ copy:
 
 # Create static website
 build:
-	.venv/bin/python build/projects.py
-	.venv/bin/python build/project_grid.py
+	uv run build/projects.py
+	uv run build/project_grid.py
 
-.PHONY: all setup copy build
+.PHONY: all copy build
